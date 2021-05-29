@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e4N-Oe-bss">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MonBalluchon-->
+        <scene sceneID="9S1-gj-I32">
+            <objects>
+                <tabBarController title="MonBalluchon" id="e4N-Oe-bss" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aK4-IC-rI5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZtA-BE-cTs" kind="relationship" relationship="viewControllers" id="i1k-QJ-abz"/>
+                        <segue destination="toF-AZ-TAd" kind="relationship" relationship="viewControllers" id="DOA-OD-bzS"/>
+                        <segue destination="e8k-jp-ntz" kind="relationship" relationship="viewControllers" id="Mni-mp-GU1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmb-rm-VaP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1972" y="25"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="y4S-DR-gEH">
+            <objects>
+                <navigationController title="Weather" id="ZtA-BE-cTs" customClass="WeatherNavigationController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="weather" id="bYV-ev-5bs">
+                        <imageReference key="image" image="sunrise" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="sunrise" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIX-SN-bbU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemTealColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SLz-Qa-uhA" kind="relationship" relationship="rootViewController" id="oEn-dF-q2h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CaK-au-Eak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-648" y="-520"/>
+        </scene>
+        <!--WEATHER-->
+        <scene sceneID="MUx-gW-tzd">
+            <objects>
+                <viewController id="SLz-Qa-uhA" customClass="WelcomeWeatherViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZUj-7P-W8q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New york" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6x-gf-wIZ">
+                                <rect key="frame" x="20" y="98" width="141" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rouen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1i8-FL-MXs">
+                                <rect key="frame" x="20" y="427" width="97" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tby-bi-jQK"/>
+                        <color key="backgroundColor" red="0.34219765660000001" green="0.41842555999999997" blue="0.51140624280000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f6x-gf-wIZ" firstAttribute="top" secondItem="tby-bi-jQK" secondAttribute="top" constant="10" id="6gq-IN-OqN"/>
+                            <constraint firstItem="1i8-FL-MXs" firstAttribute="centerY" secondItem="ZUj-7P-W8q" secondAttribute="centerY" id="NHN-d3-FTv"/>
+                            <constraint firstItem="1i8-FL-MXs" firstAttribute="leading" secondItem="tby-bi-jQK" secondAttribute="leading" constant="20" id="Ne5-Gn-lsY"/>
+                            <constraint firstItem="f6x-gf-wIZ" firstAttribute="leading" secondItem="tby-bi-jQK" secondAttribute="leading" constant="20" id="fQ4-Sl-Ke5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="WEATHER" id="DeV-Ku-hho"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JK8-mU-2kF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="-520"/>
+        </scene>
+        <!--Translation-->
+        <scene sceneID="408-tM-sDb">
+            <objects>
+                <navigationController id="toF-AZ-TAd" customClass="TranslationNavigationController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Translation" id="Se8-fi-vBs">
+                        <imageReference key="image" image="cube.transparent" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="cube.transparent" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="csa-Sy-T6Y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qfw-PW-m2p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-649" y="286"/>
+        </scene>
+        <!--Conversion-->
+        <scene sceneID="HCo-VY-noA">
+            <objects>
+                <navigationController id="e8k-jp-ntz" customClass="ConversionNavigationController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conversion" image="dollarsign.circle.fill" catalog="system" id="sfz-qB-oLI">
+                        <imageReference key="selectedImage" image="dollarsign.circle.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7b4-dv-PSb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1w-cp-RQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-649" y="1090"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cube.transparent" catalog="system" width="128" height="124"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="sunrise" catalog="system" width="128" height="97"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
