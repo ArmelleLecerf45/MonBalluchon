@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e4N-Oe-bss">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -39,7 +39,7 @@
                         <imageReference key="selectedImage" image="sunrise" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIX-SN-bbU">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemTealColor"/>
                         <textAttributes key="titleTextAttributes">
@@ -62,40 +62,41 @@
             <objects>
                 <viewController id="SLz-Qa-uhA" customClass="WelcomeWeatherViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZUj-7P-W8q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New york" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6x-gf-wIZ">
-                                <rect key="frame" x="20" y="98" width="244" height="42"/>
+                                <rect key="frame" x="20" y="98" width="220" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rouen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1i8-FL-MXs">
-                                <rect key="frame" x="20" y="427" width="244" height="42"/>
+                                <rect key="frame" x="20" y="401" width="220" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6L-xB-PSJ">
-                                <rect key="frame" x="20" y="761" width="94" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yr-qC-l3V">
+                                <rect key="frame" x="10" y="700" width="370" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Dix prochains jours">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tby-bi-jQK"/>
                         <color key="backgroundColor" red="0.34219765660000001" green="0.41842555999999997" blue="0.51140624280000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tby-bi-jQK" firstAttribute="trailing" secondItem="f6L-xB-PSJ" secondAttribute="trailing" constant="300" id="6Yr-88-v7p"/>
                             <constraint firstItem="f6x-gf-wIZ" firstAttribute="top" secondItem="tby-bi-jQK" secondAttribute="top" constant="10" id="6gq-IN-OqN"/>
+                            <constraint firstItem="6Yr-qC-l3V" firstAttribute="leading" secondItem="tby-bi-jQK" secondAttribute="leading" constant="10" id="8Tl-yL-neR"/>
                             <constraint firstItem="tby-bi-jQK" firstAttribute="trailing" secondItem="f6x-gf-wIZ" secondAttribute="trailing" constant="150" id="DfX-ym-7Dv"/>
+                            <constraint firstItem="tby-bi-jQK" firstAttribute="bottom" secondItem="6Yr-qC-l3V" secondAttribute="bottom" constant="20" id="GcT-hS-atP"/>
                             <constraint firstItem="1i8-FL-MXs" firstAttribute="centerY" secondItem="ZUj-7P-W8q" secondAttribute="centerY" id="NHN-d3-FTv"/>
                             <constraint firstItem="1i8-FL-MXs" firstAttribute="leading" secondItem="tby-bi-jQK" secondAttribute="leading" constant="20" id="Ne5-Gn-lsY"/>
-                            <constraint firstItem="tby-bi-jQK" firstAttribute="bottom" secondItem="f6L-xB-PSJ" secondAttribute="bottom" constant="10" id="OJo-Am-wrb"/>
                             <constraint firstItem="tby-bi-jQK" firstAttribute="trailing" secondItem="1i8-FL-MXs" secondAttribute="trailing" constant="150" id="ebb-Ps-vBX"/>
                             <constraint firstItem="f6x-gf-wIZ" firstAttribute="leading" secondItem="tby-bi-jQK" secondAttribute="leading" constant="20" id="fQ4-Sl-Ke5"/>
-                            <constraint firstItem="f6L-xB-PSJ" firstAttribute="leading" secondItem="tby-bi-jQK" secondAttribute="leading" constant="20" id="nUv-Dd-9PR"/>
+                            <constraint firstItem="tby-bi-jQK" firstAttribute="trailing" secondItem="6Yr-qC-l3V" secondAttribute="trailing" constant="10" id="jbj-Nb-Jjj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="WEATHER" id="DeV-Ku-hho"/>
@@ -113,7 +114,7 @@
                         <imageReference key="selectedImage" image="cube.transparent" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="csa-Sy-T6Y">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="systemGreenColor"/>
                         <color key="barTintColor" systemColor="systemGreenColor"/>
@@ -134,17 +135,17 @@
             <objects>
                 <viewController id="Ytg-RO-KxD" customClass="WelcomeWelcomeTranslationViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iUy-QV-uK0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anglais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqz-Sc-UBf">
-                                <rect key="frame" x="20" y="98" width="244" height="42"/>
+                                <rect key="frame" x="20" y="98" width="220" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrez votre texte à traduire" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="gvG-Mx-fDM">
-                                <rect key="frame" x="20" y="170" width="374" height="200"/>
+                                <rect key="frame" x="20" y="170" width="350" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Ppo-24-rcr"/>
                                 </constraints>
@@ -152,13 +153,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Français" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSB-is-QWo">
-                                <rect key="frame" x="20" y="427" width="244" height="42"/>
+                                <rect key="frame" x="20" y="401" width="220" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.33771082777081574" green="0.47371403857915084" blue="0.36910055133120995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Traduction" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GAp-Hp-JYP">
-                                <rect key="frame" x="20" y="499" width="374" height="200"/>
+                                <rect key="frame" x="20" y="473" width="350" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="je7-5i-NBj"/>
                                 </constraints>
@@ -197,13 +198,33 @@
                         <imageReference key="selectedImage" image="dollarsign.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7b4-dv-PSb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.77320552327340941" blue="0.95042214479368003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="gu2-2E-fMt" kind="relationship" relationship="rootViewController" id="LPF-8E-10j"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1w-cp-RQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-649" y="1090"/>
+        </scene>
+        <!--CONVERSION-->
+        <scene sceneID="Etv-vN-bgb">
+            <objects>
+                <viewController id="gu2-2E-fMt" customClass="WelcomeConversionViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LUA-3f-XZQ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Aev-Wn-tJ9"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CONVERSION" id="1Yv-y1-D3Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHN-iI-Qog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="1090"/>
         </scene>
     </scenes>
     <resources>
@@ -215,6 +236,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
