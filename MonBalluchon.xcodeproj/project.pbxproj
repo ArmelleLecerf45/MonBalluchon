@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D503949D2662A5BC00143FE1 /* WelcomeTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */; };
 		D5E2E6B226602E1D005D6111 /* WelcomeWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E2E6B126602E1D005D6111 /* WelcomeWeatherViewController.swift */; };
 		D5E9EFBD265EC192005E57EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9EFBC265EC192005E57EA /* AppDelegate.swift */; };
 		D5E9EFBF265EC192005E57EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9EFBE265EC192005E57EA /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTranslationViewController.swift; sourceTree = "<group>"; };
 		D5E2E6B126602E1D005D6111 /* WelcomeWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeWeatherViewController.swift; sourceTree = "<group>"; };
 		D5E9EFB9265EC192005E57EA /* MonBalluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonBalluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E9EFBC265EC192005E57EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				D5E9EFBC265EC192005E57EA /* AppDelegate.swift */,
 				D5E9EFBE265EC192005E57EA /* SceneDelegate.swift */,
 				D5E9EFC2265EC192005E57EA /* Main.storyboard */,
+				D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */,
 				D5E2E6B126602E1D005D6111 /* WelcomeWeatherViewController.swift */,
 				D5E9EFD3265EC73C005E57EA /* WeatherNavigationController.swift */,
 				D5E9EFD6265EC75D005E57EA /* TranslationNavigationController.swift */,
@@ -152,6 +155,7 @@
 				D5E9EFBF265EC192005E57EA /* SceneDelegate.swift in Sources */,
 				D5E9EFD7265EC75D005E57EA /* TranslationNavigationController.swift in Sources */,
 				D5E2E6B226602E1D005D6111 /* WelcomeWeatherViewController.swift in Sources */,
+				D503949D2662A5BC00143FE1 /* WelcomeTranslationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
