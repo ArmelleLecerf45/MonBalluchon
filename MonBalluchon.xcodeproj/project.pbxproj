@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D503949D2662A5BC00143FE1 /* WelcomeTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */; };
 		D54C8A3A2662D196001AD099 /* WelcomeConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C8A392662D196001AD099 /* WelcomeConversionViewController.swift */; };
+		D5BEC5692663D8B700404316 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BEC5682663D8B700404316 /* WeatherViewController.swift */; };
 		D5E2E6B226602E1D005D6111 /* WelcomeWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E2E6B126602E1D005D6111 /* WelcomeWeatherViewController.swift */; };
 		D5E9EFBD265EC192005E57EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9EFBC265EC192005E57EA /* AppDelegate.swift */; };
 		D5E9EFBF265EC192005E57EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9EFBE265EC192005E57EA /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTranslationViewController.swift; sourceTree = "<group>"; };
 		D54C8A392662D196001AD099 /* WelcomeConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeConversionViewController.swift; sourceTree = "<group>"; };
+		D5BEC5682663D8B700404316 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		D5E2E6B126602E1D005D6111 /* WelcomeWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeWeatherViewController.swift; sourceTree = "<group>"; };
 		D5E9EFB9265EC192005E57EA /* MonBalluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonBalluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E9EFBC265EC192005E57EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				D5E9EFBC265EC192005E57EA /* AppDelegate.swift */,
 				D5E9EFBE265EC192005E57EA /* SceneDelegate.swift */,
 				D5E9EFC2265EC192005E57EA /* Main.storyboard */,
+				D5BEC5682663D8B700404316 /* WeatherViewController.swift */,
 				D54C8A392662D196001AD099 /* WelcomeConversionViewController.swift */,
 				D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */,
 				D5E2E6B126602E1D005D6111 /* WelcomeWeatherViewController.swift */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5E9EFD4265EC73C005E57EA /* WeatherNavigationController.swift in Sources */,
+				D5BEC5692663D8B700404316 /* WeatherViewController.swift in Sources */,
 				D54C8A3A2662D196001AD099 /* WelcomeConversionViewController.swift in Sources */,
 				D5E9EFDA265EC77C005E57EA /* ConversionNavigationController.swift in Sources */,
 				D5E9EFBD265EC192005E57EA /* AppDelegate.swift in Sources */,
