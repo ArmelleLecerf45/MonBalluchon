@@ -27,7 +27,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le Balluchon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2c-SV-ar4">
-                                        <rect key="frame" x="50" y="30" width="328" height="54"/>
+                                        <rect key="frame" x="91" y="30" width="246" height="54"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -35,12 +35,10 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="U2c-SV-ar4" secondAttribute="trailing" constant="50" id="33W-8b-T2A"/>
                                     <constraint firstItem="U2c-SV-ar4" firstAttribute="top" secondItem="FjY-ux-DnR" secondAttribute="top" constant="30" id="BQ7-Xe-8Gk"/>
+                                    <constraint firstItem="U2c-SV-ar4" firstAttribute="centerX" secondItem="FjY-ux-DnR" secondAttribute="centerX" id="N3n-LQ-yQm"/>
                                     <constraint firstItem="v0C-iH-2gc" firstAttribute="centerY" secondItem="FjY-ux-DnR" secondAttribute="centerY" id="PkO-rm-mhY"/>
-                                    <constraint firstItem="U2c-SV-ar4" firstAttribute="leading" secondItem="FjY-ux-DnR" secondAttribute="leading" constant="50" id="Xlr-Vv-Uh1"/>
                                     <constraint firstItem="v0C-iH-2gc" firstAttribute="centerX" secondItem="FjY-ux-DnR" secondAttribute="centerX" id="gX7-BG-CPy"/>
-                                    <constraint firstItem="U2c-SV-ar4" firstAttribute="centerX" secondItem="FjY-ux-DnR" secondAttribute="centerX" id="iPQ-N0-gfJ"/>
                                 </constraints>
                             </view>
                         </subviews>
