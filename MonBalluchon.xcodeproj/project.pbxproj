@@ -55,6 +55,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D570150726657F28000B50D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5E9EFC7265EC193005E57EA /* LaunchScreen.storyboard */,
+				D5E9EFC2265EC192005E57EA /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D570150826657F39000B50D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5C82C7326656E8F00C11771 /* ConversionViewController.swift */,
+				D5C82C7126656E5300C11771 /* TranslationViewController.swift */,
+				D54C8A392662D196001AD099 /* WelcomeConversionViewController.swift */,
+				D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */,
+				D5E9EFD6265EC75D005E57EA /* TranslationNavigationController.swift */,
+				D5E9EFD9265EC77C005E57EA /* ConversionNavigationController.swift */,
+				D5E2E6B126602E1D005D6111 /* WelcomeWeatherViewController.swift */,
+				D5BEC5682663D8B700404316 /* WeatherViewController.swift */,
+				D5C82C7526656F2900C11771 /* PrevisionsViewController.swift */,
+				D5E9EFD3265EC73C005E57EA /* WeatherNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D570150926657FCB000B50D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D5E9EFB0265EC192005E57EA = {
 			isa = PBXGroup;
 			children = (
@@ -74,21 +107,12 @@
 		D5E9EFBB265EC192005E57EA /* MonBalluchon */ = {
 			isa = PBXGroup;
 			children = (
+				D570150926657FCB000B50D7 /* Model */,
+				D570150726657F28000B50D7 /* View */,
+				D570150826657F39000B50D7 /* Controller */,
 				D5E9EFBC265EC192005E57EA /* AppDelegate.swift */,
 				D5E9EFBE265EC192005E57EA /* SceneDelegate.swift */,
-				D5E9EFC2265EC192005E57EA /* Main.storyboard */,
-				D5C82C7526656F2900C11771 /* PrevisionsViewController.swift */,
-				D5C82C7326656E8F00C11771 /* ConversionViewController.swift */,
-				D5C82C7126656E5300C11771 /* TranslationViewController.swift */,
-				D5BEC5682663D8B700404316 /* WeatherViewController.swift */,
-				D54C8A392662D196001AD099 /* WelcomeConversionViewController.swift */,
-				D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */,
-				D5E2E6B126602E1D005D6111 /* WelcomeWeatherViewController.swift */,
-				D5E9EFD3265EC73C005E57EA /* WeatherNavigationController.swift */,
-				D5E9EFD6265EC75D005E57EA /* TranslationNavigationController.swift */,
-				D5E9EFD9265EC77C005E57EA /* ConversionNavigationController.swift */,
 				D5E9EFC5265EC193005E57EA /* Assets.xcassets */,
-				D5E9EFC7265EC193005E57EA /* LaunchScreen.storyboard */,
 				D5E9EFCA265EC193005E57EA /* Info.plist */,
 			);
 			path = MonBalluchon;
