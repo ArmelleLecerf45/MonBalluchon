@@ -21,9 +21,9 @@
                         <color key="barTintColor" systemColor="systemGray5Color"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ZtA-BE-cTs" kind="relationship" relationship="viewControllers" id="i1k-QJ-abz"/>
-                        <segue destination="toF-AZ-TAd" kind="relationship" relationship="viewControllers" id="DOA-OD-bzS"/>
-                        <segue destination="e8k-jp-ntz" kind="relationship" relationship="viewControllers" id="Mni-mp-GU1"/>
+                        <segue destination="ZtA-BE-cTs" kind="relationship" relationship="viewControllers" id="efK-dc-VL2"/>
+                        <segue destination="toF-AZ-TAd" kind="relationship" relationship="viewControllers" id="1ou-4C-knZ"/>
+                        <segue destination="e8k-jp-ntz" kind="relationship" relationship="viewControllers" id="Tlw-C9-WZI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmb-rm-VaP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -61,7 +61,7 @@
         <scene sceneID="MUx-gW-tzd">
             <objects>
                 <viewController id="SLz-Qa-uhA" customClass="WelcomeWeatherViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZUj-7P-W8q">
+                    <view key="view" contentMode="scaleToFill" id="ZUj-7P-W8q" customClass="WeatherViewCotroller" customModule="MonBalluchon" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -108,20 +108,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iJ-Uq-4I3">
-                                <rect key="frame" x="20" y="64" width="280" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="20" y="54" width="280" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qta-Da-mfh">
-                                <rect key="frame" x="20" y="126" width="280" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="20" y="105" width="280" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rouen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-YS-sCC">
-                                <rect key="frame" x="20" y="263" width="280" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="20" y="266" width="280" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -131,20 +131,23 @@
                                 <state key="normal" title="Dix prochains jours">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="OUP-7u-evf" kind="presentation" id="14b-zw-bEK"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h9e-lp-kA2">
-                                <rect key="frame" x="130" y="260" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="GpD-VL-EMV"/>
-                                    <constraint firstAttribute="height" constant="60" id="Jpj-fW-zR5"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Température" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qop-Bv-6Jd">
-                                <rect key="frame" x="20" y="188" width="280" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="20" y="156" width="280" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h9e-lp-kA2">
+                                <rect key="frame" x="135" y="202" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="GpD-VL-EMV"/>
+                                    <constraint firstAttribute="height" constant="50" id="Jpj-fW-zR5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dnp-me-6vl"/>
                         <color key="backgroundColor" red="0.4939248557" green="0.60739276009999998" blue="0.74825841729999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -154,18 +157,18 @@
                             <constraint firstItem="qop-Bv-6Jd" firstAttribute="centerX" secondItem="qr3-FQ-IEu" secondAttribute="centerX" id="668-Cm-dv4"/>
                             <constraint firstItem="x2u-4p-QdQ" firstAttribute="leading" secondItem="dnp-me-6vl" secondAttribute="leading" constant="20" id="8w1-86-xqE"/>
                             <constraint firstItem="8iJ-Uq-4I3" firstAttribute="leading" secondItem="dnp-me-6vl" secondAttribute="leading" constant="20" id="EXf-8e-u3W"/>
-                            <constraint firstItem="8iJ-Uq-4I3" firstAttribute="top" secondItem="dnp-me-6vl" secondAttribute="top" constant="20" id="HwP-Pv-sTr"/>
+                            <constraint firstItem="8iJ-Uq-4I3" firstAttribute="top" secondItem="dnp-me-6vl" secondAttribute="top" constant="10" id="HwP-Pv-sTr"/>
                             <constraint firstItem="qta-Da-mfh" firstAttribute="leading" secondItem="dnp-me-6vl" secondAttribute="leading" constant="20" id="OJR-zF-qME"/>
                             <constraint firstItem="dnp-me-6vl" firstAttribute="trailing" secondItem="qop-Bv-6Jd" secondAttribute="trailing" constant="20" id="OrW-2I-7in"/>
                             <constraint firstItem="Hxa-YS-sCC" firstAttribute="leading" secondItem="dnp-me-6vl" secondAttribute="leading" constant="20" id="RwJ-mP-NMM"/>
+                            <constraint firstItem="h9e-lp-kA2" firstAttribute="centerX" secondItem="qr3-FQ-IEu" secondAttribute="centerX" id="VUW-nc-NJi"/>
                             <constraint firstItem="dnp-me-6vl" firstAttribute="bottom" secondItem="x2u-4p-QdQ" secondAttribute="bottom" constant="10" id="XtY-hi-Q8N"/>
                             <constraint firstItem="dnp-me-6vl" firstAttribute="trailing" secondItem="8iJ-Uq-4I3" secondAttribute="trailing" constant="20" id="aeh-Yy-MGr"/>
-                            <constraint firstItem="qop-Bv-6Jd" firstAttribute="top" secondItem="qta-Da-mfh" secondAttribute="bottom" constant="20" id="bmM-Yw-pWA"/>
-                            <constraint firstItem="h9e-lp-kA2" firstAttribute="top" secondItem="qop-Bv-6Jd" secondAttribute="bottom" constant="30" id="kYZ-wf-54D"/>
-                            <constraint firstItem="qta-Da-mfh" firstAttribute="top" secondItem="8iJ-Uq-4I3" secondAttribute="bottom" constant="20" id="oig-36-MMK"/>
+                            <constraint firstItem="qop-Bv-6Jd" firstAttribute="top" secondItem="qta-Da-mfh" secondAttribute="bottom" constant="15" id="bmM-Yw-pWA"/>
+                            <constraint firstItem="h9e-lp-kA2" firstAttribute="top" secondItem="qop-Bv-6Jd" secondAttribute="bottom" constant="10" id="kYZ-wf-54D"/>
+                            <constraint firstItem="qta-Da-mfh" firstAttribute="top" secondItem="8iJ-Uq-4I3" secondAttribute="bottom" constant="15" id="oig-36-MMK"/>
                             <constraint firstItem="dnp-me-6vl" firstAttribute="trailing" secondItem="x2u-4p-QdQ" secondAttribute="trailing" constant="20" id="vUG-vg-EFN"/>
                             <constraint firstItem="dnp-me-6vl" firstAttribute="trailing" secondItem="Hxa-YS-sCC" secondAttribute="trailing" constant="20" id="wCk-P7-r0H"/>
-                            <constraint firstItem="h9e-lp-kA2" firstAttribute="centerX" secondItem="qr3-FQ-IEu" secondAttribute="centerX" id="wrG-rd-jF5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KAd-mb-5BJ"/>
@@ -173,6 +176,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayB-PI-sX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1528" y="-520"/>
+        </scene>
+        <!--Previsions View Controller-->
+        <scene sceneID="lsj-l0-9ri">
+            <objects>
+                <viewController id="OUP-7u-evf" customClass="PrevisionsViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NXQ-YG-K1m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgq-Og-SZD">
+                                <rect key="frame" x="28" y="37" width="30" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="OUP-7u-evf" eventType="touchUpInside" id="wRi-JE-2fi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pUd-hP-IiS"/>
+                        <color key="backgroundColor" red="0.4939248557" green="0.60739276009999998" blue="0.74825841729999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOt-L2-v0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2584" y="-892"/>
         </scene>
         <!--Translation-->
         <scene sceneID="408-tM-sDb">
@@ -202,7 +233,7 @@
         <!--TRANSLATION-->
         <scene sceneID="k4x-Vc-Qcq">
             <objects>
-                <viewController id="Ytg-RO-KxD" customClass="WelcomeWelcomeTranslationViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ytg-RO-KxD" customClass="WelcomeTranslationViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iUy-QV-uK0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,10 +274,10 @@
             </objects>
             <point key="canvasLocation" x="594" y="285"/>
         </scene>
-        <!--View Controller-->
+        <!--Translation View Controller-->
         <scene sceneID="mo1-2z-SCM">
             <objects>
-                <viewController id="jcq-8E-3Rb" sceneMemberID="viewController">
+                <viewController id="jcq-8E-3Rb" customClass="TranslationViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U6X-7R-KHG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,10 +409,10 @@
             </objects>
             <point key="canvasLocation" x="593" y="1089"/>
         </scene>
-        <!--View Controller-->
+        <!--Conversion View Controller-->
         <scene sceneID="GIo-gz-y7Z">
             <objects>
-                <viewController id="rQA-WK-UjS" sceneMemberID="viewController">
+                <viewController id="rQA-WK-UjS" customClass="ConversionViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZGi-XM-lDw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
