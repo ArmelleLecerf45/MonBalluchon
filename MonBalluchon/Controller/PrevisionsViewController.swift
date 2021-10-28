@@ -1,14 +1,16 @@
 //
-//  ConversionNavigationController.swift
+//  PrévisionsViewController.swift
 //  MonBalluchon
 //
-//  Created by macmini-Armelle on 26/05/2021.
+//  Created by macmini-Armelle on 31/05/2021.
 //
 
 import UIKit
 
-class ConversionNavigationController: UIViewController {
+class PrevisionsViewController: UIViewController {
 
+    @IBAction func dismiss(_ sender: UIButton) {dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

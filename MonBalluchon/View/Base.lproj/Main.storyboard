@@ -1,45 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e4N-Oe-bss">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b3s-rN-3r3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MonBalluchon-->
-        <scene sceneID="9S1-gj-I32">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wmb-rm-VaP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tabBarController title="MonBalluchon" id="e4N-Oe-bss" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aK4-IC-rI5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemPurpleColor"/>
-                        <color key="barTintColor" systemColor="systemGray5Color"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="ZtA-BE-cTs" kind="relationship" relationship="viewControllers" id="efK-dc-VL2"/>
-                        <segue destination="toF-AZ-TAd" kind="relationship" relationship="viewControllers" id="1ou-4C-knZ"/>
-                        <segue destination="e8k-jp-ntz" kind="relationship" relationship="viewControllers" id="YF0-FA-j0v"/>
-                    </connections>
-                </tabBarController>
-            </objects>
-            <point key="canvasLocation" x="-1972" y="25"/>
-        </scene>
         <!--WEATHER-->
         <scene sceneID="y4S-DR-gEH">
             <objects>
-                <navigationController title="WEATHER" id="ZtA-BE-cTs" customClass="WeatherNavigationController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController title="WEATHER" id="ZtA-BE-cTs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="weather" id="bYV-ev-5bs">
                         <imageReference key="image" image="sunrise" catalog="system" symbolScale="large"/>
                         <imageReference key="selectedImage" image="sunrise" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UIX-SN-bbU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemTealColor"/>
                         <textAttributes key="titleTextAttributes">
@@ -55,28 +35,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CaK-au-Eak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-648" y="-520"/>
+            <point key="canvasLocation" x="-875" y="-1130"/>
         </scene>
         <!--WEATHER-->
         <scene sceneID="MUx-gW-tzd">
             <objects>
                 <viewController id="SLz-Qa-uhA" customClass="WelcomeWeatherViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZUj-7P-W8q" customClass="WeatherViewCotroller" customModule="MonBalluchon" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-Q6-5sB">
-                                <rect key="frame" x="-10" y="34" width="340" height="485"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-Q6-5sB" customClass="WelcomeWeatherController" customModule="MonBalluchon" customModuleProvider="target">
+                                <rect key="frame" x="-10" y="46" width="434" height="767"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nuages-et-soleil" translatesAutoresizingMaskIntoConstraints="NO" id="0oE-zA-ybz">
-                                        <rect key="frame" x="45" y="117.5" width="250" height="250"/>
+                                        <rect key="frame" x="92" y="258.5" width="250" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="Rnw-yl-lQo"/>
                                             <constraint firstAttribute="height" constant="250" id="d87-lg-yQ7"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-32-8oN">
-                                        <rect key="frame" x="144" y="411" width="52" height="54"/>
+                                        <rect key="frame" x="191" y="693" width="52" height="54"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <state key="normal" title="GO">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,36 +88,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JK8-mU-2kF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="-520"/>
+            <point key="canvasLocation" x="492.75362318840581" y="-1131.521739130435"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="Vww-ky-VAO">
             <objects>
                 <viewController id="2jN-fB-ItW" customClass="WeatherViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qr3-FQ-IEu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iJ-Uq-4I3">
-                                <rect key="frame" x="20" y="54" width="280" height="36"/>
+                                <rect key="frame" x="20" y="66" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qta-Da-mfh">
-                                <rect key="frame" x="20" y="105" width="280" height="36"/>
+                                <rect key="frame" x="20" y="117" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rouen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-YS-sCC">
-                                <rect key="frame" x="20" y="286" width="280" height="36"/>
+                                <rect key="frame" x="20" y="423" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2u-4p-QdQ">
-                                <rect key="frame" x="20" y="467" width="280" height="42"/>
+                                <rect key="frame" x="20" y="761" width="374" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Dix prochains jours">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,13 +127,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Température" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qop-Bv-6Jd">
-                                <rect key="frame" x="20" y="156" width="280" height="36"/>
+                                <rect key="frame" x="20" y="168" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h9e-lp-kA2">
-                                <rect key="frame" x="130" y="202" width="60" height="60"/>
+                                <rect key="frame" x="177" y="214" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="3n9-1Q-7oK"/>
                                     <constraint firstAttribute="width" constant="60" id="GpD-VL-EMV"/>
@@ -162,13 +142,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Température" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFs-E0-YgV">
-                                <rect key="frame" x="79" y="337" width="162" height="36"/>
+                                <rect key="frame" x="126" y="474" width="162" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VSf-dh-CmC">
-                                <rect key="frame" x="130" y="388" width="60" height="60"/>
+                                <rect key="frame" x="177" y="525" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Yvq-h3-Hpq"/>
                                     <constraint firstAttribute="height" constant="60" id="vGq-Hw-LKo"/>
@@ -203,17 +183,26 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KAd-mb-5BJ"/>
+                    <connections>
+                        <outlet property="date" destination="8iJ-Uq-4I3" id="phy-tI-ugY"/>
+                        <outlet property="imageTemps" destination="h9e-lp-kA2" id="wI7-1a-cqv"/>
+                        <outlet property="imageTemps2" destination="VSf-dh-CmC" id="CdW-oM-epk"/>
+                        <outlet property="temperature" destination="qop-Bv-6Jd" id="0e4-jY-jz0"/>
+                        <outlet property="temperature2" destination="CFs-E0-YgV" id="XFa-ab-FML"/>
+                        <outlet property="ville" destination="qta-Da-mfh" id="DnC-6o-qbb"/>
+                        <outlet property="ville2" destination="CFs-E0-YgV" id="k6R-yW-7ef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayB-PI-sX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528" y="-520"/>
+            <point key="canvasLocation" x="1570" y="-1131"/>
         </scene>
         <!--Previsions View Controller-->
         <scene sceneID="lsj-l0-9ri">
             <objects>
                 <viewController id="OUP-7u-evf" customClass="PrevisionsViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NXQ-YG-K1m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgq-Og-SZD">
@@ -234,18 +223,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOt-L2-v0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2584" y="-892"/>
+            <point key="canvasLocation" x="2623" y="-1131"/>
         </scene>
         <!--Translation-->
         <scene sceneID="408-tM-sDb">
             <objects>
-                <navigationController id="toF-AZ-TAd" customClass="TranslationNavigationController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="toF-AZ-TAd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Translation" id="Se8-fi-vBs">
                         <imageReference key="image" image="cube.transparent" catalog="system" symbolScale="large"/>
                         <imageReference key="selectedImage" image="cube.transparent" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="csa-Sy-T6Y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="systemGreenColor"/>
                         <color key="barTintColor" systemColor="systemGreenColor"/>
@@ -259,18 +248,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfw-PW-m2p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-649" y="286"/>
+            <point key="canvasLocation" x="-874" y="-298"/>
         </scene>
         <!--TRANSLATION-->
         <scene sceneID="k4x-Vc-Qcq">
             <objects>
                 <viewController id="Ytg-RO-KxD" customClass="WelcomeTranslationViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iUy-QV-uK0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ynq-eN-riN">
-                                <rect key="frame" x="92" y="429" width="136" height="70"/>
+                                <rect key="frame" x="139" y="723" width="136" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="3Q7-vE-f7f"/>
                                 </constraints>
@@ -283,7 +272,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Traduction" translatesAutoresizingMaskIntoConstraints="NO" id="8cm-iP-RcM">
-                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <rect key="frame" x="107" y="321" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="39Y-xa-bX3"/>
                                     <constraint firstAttribute="width" secondItem="8cm-iP-RcM" secondAttribute="height" multiplier="1:1" id="WR5-6y-G3L"/>
@@ -303,24 +292,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFv-gq-k4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594" y="285"/>
+            <point key="canvasLocation" x="493" y="-269"/>
         </scene>
         <!--Translation View Controller-->
         <scene sceneID="mo1-2z-SCM">
             <objects>
                 <viewController id="jcq-8E-3Rb" customClass="TranslationViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U6X-7R-KHG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Français" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajc-os-hgH">
-                                <rect key="frame" x="20" y="64" width="164" height="42"/>
+                                <rect key="frame" x="20" y="76" width="254" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.43530077210000001" green="0.53530113810000002" blue="0.65944740989999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrez votre texte ici" textAlignment="justified" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xqT-3x-aMW">
-                                <rect key="frame" x="29" y="126" width="262.5" height="150"/>
+                                <rect key="frame" x="76" y="138" width="262.5" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xqT-3x-aMW" secondAttribute="height" multiplier="7:4" id="MBx-5q-fi5"/>
                                     <constraint firstAttribute="height" constant="150" id="edE-Qi-5fm"/>
@@ -329,7 +318,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIs-Zd-iS1">
-                                <rect key="frame" x="20" y="278" width="180" height="50"/>
+                                <rect key="frame" x="20" y="290" width="274" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ph7-1n-M20"/>
                                 </constraints>
@@ -338,7 +327,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="translation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCk-es-AfT">
-                                <rect key="frame" x="29" y="330" width="262.5" height="150"/>
+                                <rect key="frame" x="76" y="342" width="262.5" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="LWl-M4-qPO"/>
                                     <constraint firstAttribute="width" secondItem="OCk-es-AfT" secondAttribute="height" multiplier="7:4" id="Xma-wn-FxN"/>
@@ -366,17 +355,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaD-m6-P6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573" y="285"/>
+            <point key="canvasLocation" x="1501" y="-269"/>
         </scene>
         <!--Conversion-->
         <scene sceneID="HCo-VY-noA">
             <objects>
-                <navigationController id="e8k-jp-ntz" customClass="ConversionNavigationController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="e8k-jp-ntz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Conversion" image="dollarsign.circle.fill" catalog="system" id="sfz-qB-oLI">
                         <imageReference key="selectedImage" image="dollarsign.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7b4-dv-PSb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="0.77320552327340941" blue="0.95042214479368003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -386,25 +375,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1w-cp-RQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-649" y="1090"/>
+            <point key="canvasLocation" x="-875" y="555"/>
         </scene>
         <!--CONVERSION-->
         <scene sceneID="Etv-vN-bgb">
             <objects>
                 <viewController id="gu2-2E-fMt" customClass="WelcomeConversionViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LUA-3f-XZQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="conversion" translatesAutoresizingMaskIntoConstraints="NO" id="KQW-c9-ztv">
-                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <rect key="frame" x="107" y="321" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KQW-c9-ztv" secondAttribute="height" multiplier="1:1" id="Q8g-XY-VTK"/>
                                     <constraint firstAttribute="width" constant="200" id="W6S-Ug-pcB"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pl3-6o-ROK">
-                                <rect key="frame" x="100" y="429" width="120" height="70"/>
+                                <rect key="frame" x="147" y="723" width="120" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="RI7-K9-0a2"/>
                                 </constraints>
@@ -417,7 +406,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ8-Ni-0yZ">
-                                <rect key="frame" x="86" y="84" width="148" height="42"/>
+                                <rect key="frame" x="133" y="96" width="148" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -438,14 +427,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHN-iI-Qog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="1089"/>
+            <point key="canvasLocation" x="493" y="580"/>
         </scene>
         <!--Conversion View Controller-->
         <scene sceneID="GIo-gz-y7Z">
             <objects>
                 <viewController id="rQA-WK-UjS" customClass="ConversionViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZGi-XM-lDw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CWU-sM-Aq0"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
@@ -454,7 +443,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAb-Pa-ksz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1571" y="1089"/>
+            <point key="canvasLocation" x="1500" y="580"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZGQ-C0-ePD">
+            <objects>
+                <viewController id="b3s-rN-3r3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KkZ-Zp-Hy0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDI-qf-DF0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P9-Le balluchon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAV-gI-AZM">
+                                        <rect key="frame" x="20" y="20" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="91h-8N-xyJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="le baluchon" translatesAutoresizingMaskIntoConstraints="NO" id="iFI-zt-5p9">
+                                        <rect key="frame" x="47" y="276" width="320" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="7Sh-H4-x7e"/>
+                                            <constraint firstAttribute="width" constant="320" id="aoq-6N-JWC"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstItem="iFI-zt-5p9" firstAttribute="centerY" secondItem="bDI-qf-DF0" secondAttribute="centerY" id="VOm-7m-1a8"/>
+                                    <constraint firstAttribute="trailing" secondItem="sAV-gI-AZM" secondAttribute="trailing" constant="20" id="eKH-WP-arq"/>
+                                    <constraint firstItem="sAV-gI-AZM" firstAttribute="leading" secondItem="bDI-qf-DF0" secondAttribute="leading" constant="20" id="gK7-bn-ISl"/>
+                                    <constraint firstItem="sAV-gI-AZM" firstAttribute="top" secondItem="bDI-qf-DF0" secondAttribute="top" constant="20" id="hQt-Hi-cHL"/>
+                                    <constraint firstItem="iFI-zt-5p9" firstAttribute="centerX" secondItem="bDI-qf-DF0" secondAttribute="centerX" id="iqD-HI-VIq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gPW-7y-VF6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bDI-qf-DF0" firstAttribute="leading" secondItem="gPW-7y-VF6" secondAttribute="leading" id="SzC-1j-t7w"/>
+                            <constraint firstAttribute="bottom" secondItem="bDI-qf-DF0" secondAttribute="bottom" id="ePx-C2-BZo"/>
+                            <constraint firstItem="bDI-qf-DF0" firstAttribute="top" secondItem="gPW-7y-VF6" secondAttribute="top" id="gve-SL-69r"/>
+                            <constraint firstItem="bDI-qf-DF0" firstAttribute="trailing" secondItem="gPW-7y-VF6" secondAttribute="trailing" id="mXg-kW-a7g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="zo5-jK-5qV" kind="show" identifier="initial" id="fPn-PJ-LHY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9r-T1-EOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3199" y="-371"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3g4-Xo-yIA">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zo5-jK-5qV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="QHK-sZ-t06"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cTa-y4-Cyz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZtA-BE-cTs" kind="relationship" relationship="viewControllers" id="ftx-eO-mYh"/>
+                        <segue destination="toF-AZ-TAd" kind="relationship" relationship="viewControllers" id="2Gu-dx-7Pa"/>
+                        <segue destination="e8k-jp-ntz" kind="relationship" relationship="viewControllers" id="qgR-XL-hjW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJD-tN-dMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2355" y="-380"/>
         </scene>
     </scenes>
     <resources>
@@ -463,21 +528,22 @@
         <image name="conversion" width="500" height="347"/>
         <image name="cube.transparent" catalog="system" width="128" height="124"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="le baluchon" width="320" height="320"/>
         <image name="sunrise" catalog="system" width="128" height="97"/>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
