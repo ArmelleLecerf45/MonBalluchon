@@ -8,36 +8,99 @@
 import UIKit
 
 class WeatherViewController: UIViewController {
+    // MARK: - IBOutlet
+  //Ajouter l'activity indicator et le connecter
+    @IBOutlet weak var dateDuJour: UILabel!
+    
+    @IBOutlet weak var newYorkCityName: UILabel!
+    
+    @IBOutlet weak var nytemperature: UILabel!
+    
+    @IBOutlet weak var nyIcone: UIImageView!
+    
+    @IBOutlet weak var nyDescriptionWeather: UILabel!
+    
+    @IBOutlet weak var gienCityName: UILabel!
+    
+    @IBOutlet weak var gienTemperature: UILabel!
+    
+    @IBOutlet weak var gienIcone: UIImageView!
+    
+    @IBOutlet weak var gienDescriptionWeather: UILabel!
+    
+    @IBOutlet weak var miseAJour: UIButton!
+    
+    // MARK: - viewDidLoad & presentAlert
+    
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            NotificationCenter.default.addObserver(self, selector: #selector(presentAlert(notification:)), name: Notification.Name("alertDisplay"), object: nil)
+            newYorkCityName.textColor = .blue
+            gienCityName.textColor = .red
+            NYWeatherUpdate()
+            GienWeatherUpdate()
+           
+        } // end of viewDidLoad
 
-    @IBOutlet weak var date: UILabel!
+        @objc private func presentAlert(notification : Notification) {
+            guard let alertInfo = notification.userInfo!["message"] as? String else { return }
+
+            let alert = UIAlertController(title: "Erreur", message: alertInfo, preferredStyle: .alert)
+            let action  = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        } // end of presentAlert
+
     
-    @IBOutlet weak var ville: UILabel!
     
-    @IBOutlet weak var imageTemps: UIImageView!
-    @IBOutlet weak var temperature: UILabel!
+    private func NYWeatherUpdate() {
+        WeatherService.sharedInstance.getWeatherNY(city: "new york") { (true, searchWeather) in
+            if true, let NYWeather = searchWeather {
+                let nydegreeInt = Int(NYWeather.main.temp!)
+                self.nytemperature.text = "\(nydegreeInt)°C"
+                self.nyIcone.image = UIImage(named: "\(NYWeather.weather[0].icon).png")
+                self.nyDescriptionWeather.text = NYWeather.weather[0].description
+            }
+        }
+    } // end of NYWeatherUpdate
+    
+    private func GienWeatherUpdate() {
+        WeatherService.sharedInstance.getWeatherGien(city: "gien") { (true, searchWeather) in
+            if true, let GienWeather = searchWeather {
+                let gienDegreeInt = Int(GienWeather.main.temp!)
+                self.gienTemperature.text = "\(gienDegreeInt)°C"
+                self.gienIcone.image = UIImage(named: "\(GienWeather.weather[0].icon).png")
+                self.nyDescriptionWeather.text = GienWeather.weather[0].description
+            }
+        }
+    } // end of NYWeatherUpdate
+    
    
-    @IBOutlet weak var ville2: NSLayoutConstraint!
    
-    @IBOutlet weak var temperature2: UILabel!
-    
-    @IBOutlet weak var imageTemps2: UIImageView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func updateWeatherButton(_ sender: Any) 
+    {
+    //   self.dateDuJour.text = WeatherService.shared.convertDt(dt: MyData.dt)
         
-        
-        Weather.getWeather()
-        // Do any additional setup after loading the view.
+        WeatherService.sharedInstance.getWeatherNY(city: "new york") { (true, searchWeather) in
+            
+             self.NYWeatherUpdate()
+            
+            }
+        WeatherService.sharedInstance.getWeatherGien(city: "gien") { (true, searchWeather) in
+            self.GienWeatherUpdate()
     }
+      //  @IBAction func searchButtonTaped() {
+      //      toggleActivityIndicator(shown: true)
+       //     city.resignFirstResponder()
+       //     WeatherService.shared.getWeather(city: city.text!) { (true, //searchWeather) in
+           //     self.toggleActivityIndicator(shown: false)
+            //    if true, let resultWeather = searchWeather {
+            //        self.displayWeatherInfo(weather: resultWeather)
+            //        self.NYWeatherUpdate()
+      //          }
+      //      }
+     //   }// end of searchButtonTaped
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+}
 }
