@@ -88,6 +88,7 @@ class ConversionService{
                 ConversionService.shared.rateArray.append(searchRate.rates.GBP)
                 ConversionService.shared.rateArray.append(searchRate.rates.ILS)
                 ConversionService.shared.rateArray.append(searchRate.rates.JPY)
+                ConversionService.shared.rateArray.append(searchRate.rates.RUB)
                 ConversionService.shared.rateArray.append(searchRate.rates.USD)
             }
         }

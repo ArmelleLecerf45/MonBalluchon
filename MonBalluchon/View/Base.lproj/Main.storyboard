@@ -251,7 +251,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M2D-yA-p1O">
                                 <rect key="frame" x="10" y="76" width="394" height="717"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Entrez votre texte ici" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rB0-ug-6bP">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bonjour" borderStyle="roundedRect" placeholder="Entrez votre texte ici" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rB0-ug-6bP">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="232.5"/>
                                         <color key="backgroundColor" red="0.92884626290000005" green="0.74143067250000005" blue="0.0069449936329999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
@@ -422,11 +422,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U7z-EB-tqZ">
                                 <rect key="frame" x="20" y="86" width="324" height="64"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Euro" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k4V-Ct-5ER">
-                                        <rect key="frame" x="0.0" y="7" width="150" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="valeur en euro" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k4V-Ct-5ER">
+                                        <rect key="frame" x="0.0" y="7" width="265" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="PT3-NH-FfL"/>
-                                            <constraint firstAttribute="width" constant="150" id="T8q-nq-FMO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -435,7 +434,7 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-uh-NOn">
-                                        <rect key="frame" x="170" y="0.0" width="154" height="64"/>
+                                        <rect key="frame" x="285" y="0.0" width="39" height="64"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="45"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -496,12 +495,19 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="conversionBouton:" destination="rQA-WK-UjS" eventType="touchUpInside" id="0JV-uM-5J5"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="umW-3L-mdh">
+                                <rect key="frame" x="197" y="411" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CWU-sM-Aq0"/>
                         <color key="backgroundColor" red="1" green="0.47924256539999999" blue="0.56018610410000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S8H-RV-RmH" firstAttribute="centerY" secondItem="ZGi-XM-lDw" secondAttribute="centerY" id="0rZ-IR-x5d"/>
+                            <constraint firstItem="umW-3L-mdh" firstAttribute="centerY" secondItem="ZGi-XM-lDw" secondAttribute="centerY" id="1C2-Yz-YNg"/>
                             <constraint firstItem="U7z-EB-tqZ" firstAttribute="top" secondItem="CWU-sM-Aq0" secondAttribute="top" constant="30" id="Brb-gU-Z7f"/>
                             <constraint firstItem="pa2-Bn-jgX" firstAttribute="centerX" secondItem="ZGi-XM-lDw" secondAttribute="centerX" id="EOr-NR-pJW"/>
                             <constraint firstItem="pa2-Bn-jgX" firstAttribute="top" secondItem="S8H-RV-RmH" secondAttribute="bottom" constant="20" id="J6g-g7-5rl"/>
@@ -514,11 +520,17 @@
                             <constraint firstItem="CWU-sM-Aq0" firstAttribute="bottom" secondItem="wcI-mt-604" secondAttribute="bottom" constant="15" id="l9X-ML-oPc"/>
                             <constraint firstItem="wcI-mt-604" firstAttribute="leading" secondItem="CWU-sM-Aq0" secondAttribute="leading" constant="20" id="skV-u4-MNU"/>
                             <constraint firstItem="U7z-EB-tqZ" firstAttribute="leading" secondItem="ZGi-XM-lDw" secondAttribute="leading" constant="20" id="xkA-6r-nZe"/>
+                            <constraint firstItem="umW-3L-mdh" firstAttribute="centerX" secondItem="ZGi-XM-lDw" secondAttribute="centerX" id="zQz-UE-60s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JKX-BN-D9I"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="umW-3L-mdh" id="F6s-vn-3Kb"/>
+                        <outlet property="conversion" destination="S8H-RV-RmH" id="LWa-1j-Oc2"/>
                         <outlet property="euroTextField" destination="k4V-Ct-5ER" id="Dx7-fF-YsI"/>
+                        <outlet property="ratePickerView" destination="eum-Sv-LFp" id="fra-Fi-pZq"/>
+                        <outlet property="resultInNewChange" destination="gtR-ZF-1EZ" id="9oV-w3-guk"/>
+                        <outlet property="tauxDeConversion" destination="wcI-mt-604" id="bCa-iR-kD3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAb-Pa-ksz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
