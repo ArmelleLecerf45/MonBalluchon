@@ -562,7 +562,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.86258782280000001" green="0.75384839110000001" blue="0.54190435540000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="le baluchon">
+                                <buttonConfiguration key="configuration" style="filled" image="le baluchon">
                                     <attributedString key="attributedTitle">
                                         <fragment content="B">
                                             <attributes>
