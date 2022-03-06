@@ -423,18 +423,18 @@
                                 <rect key="frame" x="20" y="86" width="324" height="64"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="valeur en euro" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k4V-Ct-5ER">
-                                        <rect key="frame" x="0.0" y="7" width="265" height="50"/>
+                                        <rect key="frame" x="0.0" y="7" width="257" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="PT3-NH-FfL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="rQA-WK-UjS" id="WdE-6Z-vOs"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-uh-NOn">
-                                        <rect key="frame" x="285" y="0.0" width="39" height="64"/>
+                                        <rect key="frame" x="277" y="0.0" width="47" height="64"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="45"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -445,8 +445,8 @@
                                 <rect key="frame" x="5" y="466" width="404" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="résultat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtR-ZF-1EZ">
-                                        <rect key="frame" x="0.0" y="50" width="197" height="50"/>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
+                                        <rect key="frame" x="0.0" y="57.5" width="197" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -465,12 +465,12 @@
                                     <constraint firstAttribute="height" constant="150" id="KG8-yD-rzG"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="taux de convertion mis à jour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-mt-604">
-                                <rect key="frame" x="20" y="768" width="374" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="taux de convertion mis à jour" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-mt-604">
+                                <rect key="frame" x="20" y="758" width="374" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="vbd-co-Tjz"/>
+                                    <constraint firstAttribute="height" constant="40" id="vbd-co-Tjz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -555,8 +555,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEt-Ci-y9E">
-                                <rect key="frame" x="30.5" y="271.5" width="353" height="353"/>
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="dlN-nq-Ch6"/>
                                     <constraint firstAttribute="width" secondItem="wEt-Ci-y9E" secondAttribute="height" multiplier="1:1" id="wrE-zh-Ajc"/>
                                 </constraints>
                                 <color key="tintColor" red="0.86258782280000001" green="0.75384839110000001" blue="0.54190435540000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

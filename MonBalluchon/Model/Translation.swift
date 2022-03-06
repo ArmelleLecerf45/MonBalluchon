@@ -6,15 +6,15 @@
 //
 
 import Foundation
-struct Datas: Codable {
+struct Datas: Decodable {
     let data: Texts
 }
 
-struct Texts: Codable {
+struct Texts: Decodable {
     let translations: [TextToTranslateAndTarget]
 }
 
-struct TextToTranslateAndTarget: Codable {
+struct TextToTranslateAndTarget: Decodable {
     let translatedText: String
     let detectedSourceLanguage: String
 }

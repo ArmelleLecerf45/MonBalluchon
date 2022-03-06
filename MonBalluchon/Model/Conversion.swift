@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct LastRate: Codable {
+struct LastRate: Decodable {
     let success: Bool
     let timestamp: Int
     let base: String
@@ -16,7 +16,7 @@ struct LastRate: Codable {
     let rates : ExchangeRates
 }
 
-struct ExchangeRates: Codable {
+struct ExchangeRates: Decodable {
     let ARS: Double
     let AUD: Double
     let BTC: Double
