@@ -420,7 +420,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U7z-EB-tqZ">
-                                <rect key="frame" x="20" y="86" width="324" height="64"/>
+                                <rect key="frame" x="20" y="106" width="324" height="64"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="valeur en euro" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k4V-Ct-5ER">
                                         <rect key="frame" x="0.0" y="7" width="257" height="50"/>
@@ -493,7 +493,7 @@
                                         </fragment>
                                     </attributedString>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="conversionBouton:" destination="rQA-WK-UjS" eventType="touchUpInside" id="0JV-uM-5J5"/>
@@ -508,7 +508,7 @@
                         <constraints>
                             <constraint firstItem="S8H-RV-RmH" firstAttribute="centerY" secondItem="ZGi-XM-lDw" secondAttribute="centerY" id="0rZ-IR-x5d"/>
                             <constraint firstItem="umW-3L-mdh" firstAttribute="centerY" secondItem="ZGi-XM-lDw" secondAttribute="centerY" id="1C2-Yz-YNg"/>
-                            <constraint firstItem="U7z-EB-tqZ" firstAttribute="top" secondItem="CWU-sM-Aq0" secondAttribute="top" constant="30" id="Brb-gU-Z7f"/>
+                            <constraint firstItem="U7z-EB-tqZ" firstAttribute="top" secondItem="CWU-sM-Aq0" secondAttribute="top" constant="50" id="Brb-gU-Z7f"/>
                             <constraint firstItem="pa2-Bn-jgX" firstAttribute="centerX" secondItem="ZGi-XM-lDw" secondAttribute="centerX" id="EOr-NR-pJW"/>
                             <constraint firstItem="pa2-Bn-jgX" firstAttribute="top" secondItem="S8H-RV-RmH" secondAttribute="bottom" constant="20" id="J6g-g7-5rl"/>
                             <constraint firstAttribute="trailing" secondItem="U7z-EB-tqZ" secondAttribute="trailing" constant="70" id="JJ3-uD-rhy"/>
@@ -625,6 +625,9 @@
         <image name="sunrise" catalog="system" width="128" height="97"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

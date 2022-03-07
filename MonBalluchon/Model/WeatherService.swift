@@ -31,6 +31,7 @@ class WeatherService{
                 guard let data = data, error == nil else {
                     callback(false, nil)
                     self.sendAlertNotification(message: "Absence de réponse du serveur")
+                    
                     return
                 }
                 print("data OK")
@@ -38,6 +39,7 @@ class WeatherService{
                     callback(false, nil)
                     print("Aucune réponse de weatherSession")
                     self.sendAlertNotification(message: "Absence de réponse du serveur!")
+                    
                     return
                 }
                 print("response status OK")
@@ -58,13 +60,14 @@ class WeatherService{
                                 let weatherDescription = responseJSON.weather[0].description
                                 let weatherIcon = responseJSON.weather[0].icon
                                 let townName = responseJSON.name
-                                let dayDate = responseJSON.dt
+                let dayDate = responseJSON.dt
+                let dateAJour = self.convertDt(dt: dayDate)
                                 print(weatherId!)
                                 print(weatherCondition)
                                 print(weatherDescription)
                                 print(weatherIcon)
                                 print(townName)
-                                print(dayDate)
+                                print(dateAJour)
                                 print (temperature!)}
                 
 

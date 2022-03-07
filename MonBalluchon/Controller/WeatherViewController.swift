@@ -36,9 +36,11 @@ class WeatherViewController: UIViewController {
             super.viewDidLoad()
             NotificationCenter.default.addObserver(self, selector: #selector(presentAlert(notification:)), name: Notification.Name("alertDisplay"), object: nil)
             newYorkCityName.textColor = .blue
+            newYorkCityName.font = .boldSystemFont(ofSize: 35)
             gienCityName.textColor = .red
+            gienCityName.font = .boldSystemFont(ofSize: 35)
             NYWeatherUpdate()
-            GienWeatherUpdate()
+          GienWeatherUpdate()
            
         } // end of viewDidLoad
 
@@ -51,7 +53,13 @@ class WeatherViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         } // end of presentAlert
 
-    
+    private func displayWeatherInfo(weather: MyData) {
+        let degreeInt = Int(weather.main.temp!)
+        nytemperature.text = "\(degreeInt)°C"
+        dateDuJour.text = WeatherService.sharedInstance.convertDt(dt: weather.dt)
+        nyIcone.image = UIImage(named: "\(weather.weather[0].icon).png")
+        nyDescriptionWeather.text = weather.weather[0].description
+    } // end of displayWeatherInfo
     
     private func NYWeatherUpdate() {
         WeatherService.sharedInstance.getWeatherNY(city: "new york") { (true, searchWeather) in
@@ -73,34 +81,36 @@ class WeatherViewController: UIViewController {
                 self.nyDescriptionWeather.text = GienWeather.weather[0].description
             }
         }
-    } // end of NYWeatherUpdate
-    
+    } // end of GienWeatherUpdate
+//
    
    
     @IBAction func updateWeatherButton(_ sender: Any) 
     {
-    //   self.dateDuJour.text = WeatherService.shared.convertDt(dt: MyData.dt)
+    //  self.dateDuJour.text = WeatherService.shared.convertDt(dt: MyData.dt)
         
         WeatherService.sharedInstance.getWeatherNY(city: "new york") { (true, searchWeather) in
             
              self.NYWeatherUpdate()
             
             }
-        WeatherService.sharedInstance.getWeatherGien(city: "gien") { (true, searchWeather) in
-            self.GienWeatherUpdate()
+//        WeatherService.sharedInstance.getWeatherGien(city: "gien") { (true, searchWeather) in
+//            self.GienWeatherUpdate()
+//    }
+     //   func searchButtonTaped() {
+           // toggleActivityIndicator(shown: true)
+//       //     city.resignFirstResponder()
+//            WeatherService.sharedInstance.getWeatherNY(city: "new york") { (true, searchWeather) in
+//               // self.toggleActivityIndicator(shown: false)
+//               if true, let resultWeather = searchWeather {
+//                    self.displayWeatherInfo(weather: resultWeather)
+//                   self.NYWeatherUpdate()
+//                   self.GienWeatherUpdate()
+//               }
+//            }
+//        }// end of searchButtonTaped
+    
+    
+}
     }
-      //  @IBAction func searchButtonTaped() {
-      //      toggleActivityIndicator(shown: true)
-       //     city.resignFirstResponder()
-       //     WeatherService.shared.getWeather(city: city.text!) { (true, //searchWeather) in
-           //     self.toggleActivityIndicator(shown: false)
-            //    if true, let resultWeather = searchWeather {
-            //        self.displayWeatherInfo(weather: resultWeather)
-            //        self.NYWeatherUpdate()
-      //          }
-      //      }
-     //   }// end of searchButtonTaped
     
-    
-}
-}
