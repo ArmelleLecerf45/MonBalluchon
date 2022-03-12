@@ -8,18 +8,18 @@
 import Foundation
 struct MyData : Decodable {
    
-    var main : Main
-    var weather : [Weather]
-    var dt : Int
-    var name : String
+    let main : Main
+    let weather : [Weather]
+    let dt : Int
+    let name : String
 }
 struct Main : Decodable{
-   var temp : Float?
+   let temp : Double
     
 }
 struct Weather : Decodable{
-   var id : Int?
-   var  main : String
-    var description : String
-    var icon : String
+   let id : Int
+   let  main : String
+    let description : String
+    let icon : String
 }

@@ -30,6 +30,7 @@ class WeatherViewController: UIViewController {
     
     @IBOutlet weak var miseAJour: UIButton!
     
+    
     // MARK: - viewDidLoad & presentAlert
     
         override func viewDidLoad() {
@@ -39,9 +40,9 @@ class WeatherViewController: UIViewController {
             newYorkCityName.font = .boldSystemFont(ofSize: 35)
             gienCityName.textColor = .red
             gienCityName.font = .boldSystemFont(ofSize: 35)
-            NYWeatherUpdate()
-          GienWeatherUpdate()
-           
+            self.GienWeatherUpdate()
+            self.NYWeatherUpdate()
+            self.updateButton()
         } // end of viewDidLoad
 
         @objc private func presentAlert(notification : Notification) {
@@ -54,17 +55,18 @@ class WeatherViewController: UIViewController {
         } // end of presentAlert
 
     private func displayWeatherInfo(weather: MyData) {
-        let degreeInt = Int(weather.main.temp!)
+        self.dateDuJour.text = WeatherService.sharedInstance.convertDt(dt: weather.dt)
+        let degreeInt = Int(weather.main.temp)
         nytemperature.text = "\(degreeInt)°C"
-        dateDuJour.text = WeatherService.sharedInstance.convertDt(dt: weather.dt)
+        dateDuJour.text = WeatherService.sharedInstance.convertDt(dt:  weather.dt)
         nyIcone.image = UIImage(named: "\(weather.weather[0].icon).png")
         nyDescriptionWeather.text = weather.weather[0].description
     } // end of displayWeatherInfo
     
     private func NYWeatherUpdate() {
-        WeatherService.sharedInstance.getWeatherNY(city: "new york") { (true, searchWeather) in
+        WeatherService.sharedInstance.getWeather(city: "new york") { (true, searchWeather) in
             if true, let NYWeather = searchWeather {
-                let nydegreeInt = Int(NYWeather.main.temp!)
+                let nydegreeInt = Int(NYWeather.main.temp)
                 self.nytemperature.text = "\(nydegreeInt)°C"
                 self.nyIcone.image = UIImage(named: "\(NYWeather.weather[0].icon).png")
                 self.nyDescriptionWeather.text = NYWeather.weather[0].description
@@ -72,10 +74,21 @@ class WeatherViewController: UIViewController {
         }
     } // end of NYWeatherUpdate
     
+    @IBAction func updateButton() {
+        WeatherService.sharedInstance.getWeather(city: "new york") { (true, searchWeather) in
+            
+             self.NYWeatherUpdate()
+            
+            }
+        WeatherService.sharedInstance.getWeather(city: "gien") { (true, searchWeather) in
+            self.GienWeatherUpdate()
+    }
+    
+    }
     private func GienWeatherUpdate() {
-        WeatherService.sharedInstance.getWeatherGien(city: "gien") { (true, searchWeather) in
+        WeatherService.sharedInstance.getWeather(city: "gien") { (true, searchWeather) in
             if true, let GienWeather = searchWeather {
-                let gienDegreeInt = Int(GienWeather.main.temp!)
+                let gienDegreeInt = Int(GienWeather.main.temp)
                 self.gienTemperature.text = "\(gienDegreeInt)°C"
                 self.gienIcone.image = UIImage(named: "\(GienWeather.weather[0].icon).png")
                 self.nyDescriptionWeather.text = GienWeather.weather[0].description
@@ -85,32 +98,7 @@ class WeatherViewController: UIViewController {
 //
    
    
-    @IBAction func updateWeatherButton(_ sender: Any) 
-    {
-    //  self.dateDuJour.text = WeatherService.shared.convertDt(dt: MyData.dt)
-        
-        WeatherService.sharedInstance.getWeatherNY(city: "new york") { (true, searchWeather) in
-            
-             self.NYWeatherUpdate()
-            
-            }
-//        WeatherService.sharedInstance.getWeatherGien(city: "gien") { (true, searchWeather) in
-//            self.GienWeatherUpdate()
-//    }
-     //   func searchButtonTaped() {
-           // toggleActivityIndicator(shown: true)
-//       //     city.resignFirstResponder()
-//            WeatherService.sharedInstance.getWeatherNY(city: "new york") { (true, searchWeather) in
-//               // self.toggleActivityIndicator(shown: false)
-//               if true, let resultWeather = searchWeather {
-//                    self.displayWeatherInfo(weather: resultWeather)
-//                   self.NYWeatherUpdate()
-//                   self.GienWeatherUpdate()
-//               }
-//            }
-//        }// end of searchButtonTaped
-    
     
 }
-    }
+    
     

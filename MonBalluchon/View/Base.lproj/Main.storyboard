@@ -32,12 +32,59 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="2jN-fB-ItW" kind="relationship" relationship="rootViewController" id="j9Y-l7-ehV"/>
+                        <segue destination="mTz-0i-7iG" kind="relationship" relationship="rootViewController" id="Vr6-Dg-Fq9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CaK-au-Eak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-875" y="-1130"/>
+        </scene>
+        <!--WEATHER-->
+        <scene sceneID="n3G-va-0gt">
+            <objects>
+                <viewController id="mTz-0i-7iG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ctg-11-ci9" customClass="WelcomeWeatherViewControler" customModule="MonBalluchon" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meteo" translatesAutoresizingMaskIntoConstraints="NO" id="UZS-M4-s0a">
+                                <rect key="frame" x="82" y="296" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="KiM-5j-afm"/>
+                                    <constraint firstAttribute="height" constant="250" id="aoh-8O-1cd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJP-mo-Z3F">
+                                <rect key="frame" x="15" y="743.5" width="384" height="49.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="W9z-G0-GUg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.35940602420000001" green="0.55669218300000001" blue="0.78607982399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Météo Gien et New-York">
+                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="2jN-fB-ItW" kind="show" id="4b2-Uz-8Lt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ztl-Cf-hKF"/>
+                        <color key="backgroundColor" red="0.44106245319999998" green="0.78039215689999997" blue="0.76018032520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MJP-mo-Z3F" firstAttribute="leading" secondItem="ztl-Cf-hKF" secondAttribute="leading" constant="15" id="8Pn-nq-Ihy"/>
+                            <constraint firstItem="ztl-Cf-hKF" firstAttribute="trailing" secondItem="MJP-mo-Z3F" secondAttribute="trailing" constant="15" id="TA2-Tf-eda"/>
+                            <constraint firstItem="UZS-M4-s0a" firstAttribute="centerY" secondItem="Ctg-11-ci9" secondAttribute="centerY" id="TBw-b4-p1Z"/>
+                            <constraint firstItem="ztl-Cf-hKF" firstAttribute="bottom" secondItem="MJP-mo-Z3F" secondAttribute="bottom" constant="20" id="Xa9-WL-Hdk"/>
+                            <constraint firstItem="UZS-M4-s0a" firstAttribute="centerX" secondItem="Ctg-11-ci9" secondAttribute="centerX" id="gaI-ux-fwL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="WEATHER" id="exx-ms-g3d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIS-7w-mt9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="433" y="-1117"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="Vww-ky-VAO">
@@ -72,8 +119,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="UpdateWeather:" destination="2jN-fB-ItW" eventType="touchUpInside" id="pZv-Sp-SCR"/>
-                                    <action selector="updateWeatherButton:" destination="2jN-fB-ItW" eventType="touchUpInside" id="g8b-ng-zqy"/>
+                                    <action selector="updateButton" destination="2jN-fB-ItW" eventType="touchUpInside" id="6bY-gL-xgT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Température" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qop-Bv-6Jd">
@@ -143,8 +189,6 @@
                             <constraint firstItem="wA3-4R-ko4" firstAttribute="centerX" secondItem="qr3-FQ-IEu" secondAttribute="centerX" id="cRK-5x-KlM"/>
                             <constraint firstItem="VSf-dh-CmC" firstAttribute="top" secondItem="CFs-E0-YgV" secondAttribute="bottom" constant="15" id="kJX-Ou-2PW"/>
                             <constraint firstItem="h9e-lp-kA2" firstAttribute="top" secondItem="qop-Bv-6Jd" secondAttribute="bottom" constant="10" id="kYZ-wf-54D"/>
-                            <constraint firstItem="Rf2-zl-HUy" firstAttribute="leading" secondItem="dnp-me-6vl" secondAttribute="leading" constant="20" id="mDR-aj-Pss"/>
-                            <constraint firstItem="wA3-4R-ko4" firstAttribute="leading" secondItem="dnp-me-6vl" secondAttribute="leading" constant="20" id="nD6-pV-Web"/>
                             <constraint firstItem="qta-Da-mfh" firstAttribute="top" secondItem="8iJ-Uq-4I3" secondAttribute="bottom" constant="15" id="oig-36-MMK"/>
                             <constraint firstItem="Rf2-zl-HUy" firstAttribute="top" secondItem="VSf-dh-CmC" secondAttribute="bottom" constant="10" id="sIb-0N-nA4"/>
                             <constraint firstItem="wA3-4R-ko4" firstAttribute="top" secondItem="h9e-lp-kA2" secondAttribute="bottom" constant="10" id="upY-LJ-FQ2"/>
@@ -168,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayB-PI-sX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="-1122"/>
+            <point key="canvasLocation" x="1529" y="-1118"/>
         </scene>
         <!--Translation-->
         <scene sceneID="408-tM-sDb">
@@ -622,6 +666,7 @@
         <image name="cube.transparent" catalog="system" width="128" height="124"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="le baluchon" width="320" height="320"/>
+        <image name="meteo" width="1223" height="1198"/>
         <image name="sunrise" catalog="system" width="128" height="97"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
