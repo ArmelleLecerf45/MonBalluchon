@@ -28,21 +28,21 @@ class WeatherViewController: UIViewController {
     
     @IBOutlet weak var gienDescriptionWeather: UILabel!
     
-    @IBOutlet weak var miseAJour: UIButton!
+   
+  
     
     
     // MARK: - viewDidLoad & presentAlert
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            NotificationCenter.default.addObserver(self, selector: #selector(presentAlert(notification:)), name: Notification.Name("alertDisplay"), object: nil)
+//            NotificationCenter.default.addObserver(self, selector: #selector(presentAlert(notification:)), name: Notification.Name("alertDisplay"), object: nil)
             newYorkCityName.textColor = .blue
             newYorkCityName.font = .boldSystemFont(ofSize: 35)
             gienCityName.textColor = .red
             gienCityName.font = .boldSystemFont(ofSize: 35)
-            self.GienWeatherUpdate()
-            self.NYWeatherUpdate()
             self.updateButton()
+            
         } // end of viewDidLoad
 
         @objc private func presentAlert(notification : Notification) {
@@ -83,7 +83,7 @@ class WeatherViewController: UIViewController {
         WeatherService.sharedInstance.getWeather(city: "gien") { (true, searchWeather) in
             self.GienWeatherUpdate()
     }
-    
+        
     }
     private func GienWeatherUpdate() {
         WeatherService.sharedInstance.getWeather(city: "gien") { (true, searchWeather) in
