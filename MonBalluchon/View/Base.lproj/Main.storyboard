@@ -42,7 +42,6 @@
         <!--View Controller-->
         <scene sceneID="n3G-va-0gt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lIS-7w-mt9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="mTz-0i-7iG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ctg-11-ci9" userLabel="Welcome Weather View Controller">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -83,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="s9G-2Q-0Fg"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIS-7w-mt9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="110" y="-1288"/>
         </scene>
