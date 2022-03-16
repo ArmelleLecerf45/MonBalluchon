@@ -10,7 +10,8 @@ import UIKit
 class WeatherViewController: UIViewController {
     // MARK: - IBOutlet
   //Ajouter l'activity indicator et le connecter
-    @IBOutlet weak var dateDuJour: UILabel!
+   
+    @IBOutlet weak var DateDuJour: UILabel!
     
     @IBOutlet weak var newYorkCityName: UILabel!
     
@@ -36,12 +37,9 @@ class WeatherViewController: UIViewController {
     
         override func viewDidLoad() {
             super.viewDidLoad()
+           
 //            NotificationCenter.default.addObserver(self, selector: #selector(presentAlert(notification:)), name: Notification.Name("alertDisplay"), object: nil)
-            newYorkCityName.textColor = .blue
-            newYorkCityName.font = .boldSystemFont(ofSize: 35)
-            gienCityName.textColor = .red
-            gienCityName.font = .boldSystemFont(ofSize: 35)
-            self.updateButton()
+          
             
         } // end of viewDidLoad
 
@@ -55,10 +53,10 @@ class WeatherViewController: UIViewController {
         } // end of presentAlert
 
     private func displayWeatherInfo(weather: MyData) {
-        self.dateDuJour.text = WeatherService.sharedInstance.convertDt(dt: weather.dt)
+        self.DateDuJour.text = WeatherService.sharedInstance.convertDt(dt: weather.dt)
         let degreeInt = Int(weather.main.temp)
         nytemperature.text = "\(degreeInt)°C"
-        dateDuJour.text = WeatherService.sharedInstance.convertDt(dt:  weather.dt)
+        
         nyIcone.image = UIImage(named: "\(weather.weather[0].icon).png")
         nyDescriptionWeather.text = weather.weather[0].description
     } // end of displayWeatherInfo
@@ -73,18 +71,22 @@ class WeatherViewController: UIViewController {
             }
         }
     } // end of NYWeatherUpdate
+    @IBAction func MiseAJour(_ sender: Any) {
     
-    @IBAction func updateButton() {
+    
+    
         WeatherService.sharedInstance.getWeather(city: "new york") { (true, searchWeather) in
             
              self.NYWeatherUpdate()
-            
+          
             }
         WeatherService.sharedInstance.getWeather(city: "gien") { (true, searchWeather) in
             self.GienWeatherUpdate()
+           
     }
         
     }
+   
     private func GienWeatherUpdate() {
         WeatherService.sharedInstance.getWeather(city: "gien") { (true, searchWeather) in
             if true, let GienWeather = searchWeather {
