@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b3s-rN-3r3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b3s-rN-3r3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -98,13 +98,13 @@
                                 <rect key="frame" x="10" y="71" width="394" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJt-uC-haf">
-                                        <rect key="frame" x="0.0" y="0.0" width="284" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="46"/>
                                         <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="35"/>
                                         <color key="textColor" systemColor="systemPurpleColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFw-xq-CsZ">
-                                        <rect key="frame" x="314" y="0.0" width="80" height="42"/>
+                                        <rect key="frame" x="310" y="0.0" width="84" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -132,17 +132,17 @@
                                     <constraint firstAttribute="height" constant="70" id="ue5-Bx-yRe"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qKz-qT-Pab">
-                                <rect key="frame" x="15" y="531" width="384" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qKz-qT-Pab">
+                                <rect key="frame" x="15" y="551" width="384" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gien" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6q-wl-2Nx">
-                                        <rect key="frame" x="0.0" y="0.0" width="208.5" height="46"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="46"/>
                                         <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="35"/>
                                         <color key="textColor" red="0.13938786689557861" green="0.1072362026318041" blue="0.80987197160720825" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWU-TW-5jF">
-                                        <rect key="frame" x="238.5" y="0.0" width="145.5" height="42"/>
+                                        <rect key="frame" x="226" y="0.0" width="158" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -152,17 +152,17 @@
                                     <constraint firstAttribute="height" constant="70" id="9S3-Qn-nfA"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date du jour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez2-eW-mAQ">
-                                <rect key="frame" x="20" y="381" width="374" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date du jour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez2-eW-mAQ">
+                                <rect key="frame" x="20" y="391" width="374" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="f05-2e-dEb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="rtl-qC-IJy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ylO-V3-81Z">
-                                <rect key="frame" x="10" y="621" width="394" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ylO-V3-81Z">
+                                <rect key="frame" x="10" y="641" width="394" height="70"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x7t-Om-i9Y">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="70"/>
@@ -183,29 +183,39 @@
                                 <rect key="frame" x="159" y="281" width="96" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="GFe-4q-8Sv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="H1s-e0-Sgc"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Mise A jour"/>
                                 <connections>
-                                    <action selector="MiseAJour:" destination="4Br-4Y-pYm" eventType="touchUpInside" id="69g-Ef-mIx"/>
-                                    <action selector="updateButton" destination="4Br-4Y-pYm" eventType="touchUpInside" id="WKr-nF-sXZ"/>
+                                    <action selector="tappedMiseAJourButton" destination="4Br-4Y-pYm" eventType="touchUpInside" id="quA-hU-j85"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EZ1-jJ-QfI">
+                                <rect key="frame" x="189.5" y="293.5" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="HmA-1b-C3i"/>
+                                    <constraint firstAttribute="height" constant="35" id="w9r-oZ-cEg"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nh8-jv-TXC"/>
                         <color key="backgroundColor" red="0.44106245319999998" green="0.78039215689999997" blue="0.76018032520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nh8-jv-TXC" firstAttribute="trailing" secondItem="qKz-qT-Pab" secondAttribute="trailing" constant="15" id="1Rp-Fd-3hD"/>
+                            <constraint firstItem="EZ1-jJ-QfI" firstAttribute="centerX" secondItem="atE-lP-dLk" secondAttribute="centerX" id="2LF-r6-Awv"/>
                             <constraint firstItem="nh8-jv-TXC" firstAttribute="trailing" secondItem="TdA-8P-SyK" secondAttribute="trailing" constant="10" id="4qA-kg-5eF"/>
                             <constraint firstItem="nh8-jv-TXC" firstAttribute="trailing" secondItem="ylO-V3-81Z" secondAttribute="trailing" constant="10" id="5WU-J2-IkH"/>
                             <constraint firstItem="nh8-jv-TXC" firstAttribute="trailing" secondItem="Ez2-eW-mAQ" secondAttribute="trailing" constant="20" id="8Kg-rr-fPc"/>
+                            <constraint firstItem="EZ1-jJ-QfI" firstAttribute="centerY" secondItem="93h-bu-xwM" secondAttribute="centerY" id="AVt-LH-sHH"/>
                             <constraint firstItem="qKz-qT-Pab" firstAttribute="top" secondItem="Ez2-eW-mAQ" secondAttribute="bottom" constant="100" id="BkJ-gg-v7K"/>
+                            <constraint firstItem="93h-bu-xwM" firstAttribute="top" secondItem="TdA-8P-SyK" secondAttribute="bottom" constant="50" id="DS8-fy-WSQ"/>
                             <constraint firstItem="93h-bu-xwM" firstAttribute="centerX" secondItem="atE-lP-dLk" secondAttribute="centerX" id="DcL-Os-fk1"/>
                             <constraint firstItem="KXa-ia-LLv" firstAttribute="leading" secondItem="nh8-jv-TXC" secondAttribute="leading" constant="10" id="Ijh-7m-HtF"/>
                             <constraint firstItem="TdA-8P-SyK" firstAttribute="leading" secondItem="nh8-jv-TXC" secondAttribute="leading" constant="10" id="KMA-ga-Rvx"/>
                             <constraint firstItem="ylO-V3-81Z" firstAttribute="top" secondItem="qKz-qT-Pab" secondAttribute="bottom" constant="20" id="Snf-OW-0vG"/>
                             <constraint firstItem="ylO-V3-81Z" firstAttribute="leading" secondItem="nh8-jv-TXC" secondAttribute="leading" constant="10" id="hN5-Et-KVw"/>
-                            <constraint firstItem="93h-bu-xwM" firstAttribute="top" secondItem="TdA-8P-SyK" secondAttribute="bottom" constant="50" id="jOA-sy-bB2"/>
+                            <constraint firstItem="Ez2-eW-mAQ" firstAttribute="top" secondItem="93h-bu-xwM" secondAttribute="bottom" constant="50" id="iSi-CU-5nm"/>
                             <constraint firstItem="Ez2-eW-mAQ" firstAttribute="leading" secondItem="nh8-jv-TXC" secondAttribute="leading" constant="20" id="ldO-6B-p8N"/>
                             <constraint firstItem="KXa-ia-LLv" firstAttribute="top" secondItem="nh8-jv-TXC" secondAttribute="top" constant="15" id="nqi-Er-D2h"/>
                             <constraint firstItem="qKz-qT-Pab" firstAttribute="leading" secondItem="nh8-jv-TXC" secondAttribute="leading" constant="15" id="p3i-Oy-F3C"/>
@@ -216,6 +226,17 @@
                     <navigationItem key="navigationItem" id="M8X-mE-axz"/>
                     <connections>
                         <outlet property="DateDuJour" destination="Ez2-eW-mAQ" id="khj-3X-kAW"/>
+                        <outlet property="MiseAJour" destination="93h-bu-xwM" id="7ml-oF-8CW"/>
+                        <outlet property="activityIndicator" destination="EZ1-jJ-QfI" id="GyT-IO-MTq"/>
+                        <outlet property="dateDuJour" destination="Ez2-eW-mAQ" id="3LA-vc-xZz"/>
+                        <outlet property="gienDescriptionWeather" destination="utv-K3-3qm" id="nnj-8g-xf3"/>
+                        <outlet property="gienIcone" destination="x7t-Om-i9Y" id="UxG-oq-tGD"/>
+                        <outlet property="gienName" destination="n6q-wl-2Nx" id="5TR-Bm-CAW"/>
+                        <outlet property="gienTemperature" destination="LWU-TW-5jF" id="LHI-Uz-tpD"/>
+                        <outlet property="nyDescriptionWeather" destination="c5S-QW-5Xi" id="ab8-MT-k6q"/>
+                        <outlet property="nyIcone" destination="qmQ-iE-MFK" id="mM6-ey-1hz"/>
+                        <outlet property="nyName" destination="EJt-uC-haf" id="G0G-T8-lev"/>
+                        <outlet property="nyTemperature" destination="cFw-xq-CsZ" id="4Gg-tE-HhD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glq-5x-tmm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -31,14 +31,14 @@ class WeatherService{
 
     // MARK: - recovery and processing of weather
     func getWeather(city: String, callback: @escaping (Bool, MyData?) -> Void) {
-        let resquest = createWeatherRequest(city: city)
+        let request = createWeatherRequest(city: city)
 
         task?.cancel()
-        task = weatherSession.dataTask(with: resquest) { (data, response, error) in
+        task = weatherSession.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     callback(false, nil)
-                    self.sendAlertNotification(message: "Absence de réponse-TEST1 du serveur")
+                    self.sendAlertNotification(message: "no server's response")
                    
                     return
                 }
@@ -47,20 +47,20 @@ class WeatherService{
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     callback(false, nil)
                     print("No response from weatherSession")
-                    self.sendAlertNotification(message: "Absence de réponse du serveur, \nVeuillez vérifier le nom de la ville !")
+                    self.sendAlertNotification(message: "no server response, \nplease check city's name !")
                     return
                 }
                 print("response status OK")
                 guard let responseJSON = try? JSONDecoder().decode(MyData.self, from: data) else {
                     callback(false, nil)
                     print("Failed to decode weatherJSON")
-                    self.sendAlertNotification(message: "Impossible de traiter la réponse du serveur ")
+                    self.sendAlertNotification(message: "unable to process server response")
                     return
                 }
                 print("JSON OK")
-                let searchWheather: MyData = responseJSON
-                callback(true, searchWheather)
-                print(searchWheather)
+                let searchWeather: MyData = responseJSON
+                callback(true, searchWeather)
+                print(searchWeather)
             }
         }
         task?.resume()
