@@ -31,7 +31,7 @@ class WeatherService{
 
     // MARK: - recovery and processing of weather
     func getWeather(city: String, callback: @escaping (Bool, MyData?) -> Void) {
-        let request = createWeatherRequest(city: city)
+        let request = createWeatherRequest(city: "city")
 
         task?.cancel()
         task = weatherSession.dataTask(with: request) { (data, response, error) in
