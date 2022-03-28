@@ -7,9 +7,27 @@
 
 import Foundation
 class MeteoService {
+    // MARK: - Singleton pattern
+    static var shared = MeteoService()
+    private init() {}
+   
+    // MARK: - Attribute & init
+    private var task : URLSessionDataTask?
+    private var weatherSession = URLSession(configuration: .default)
+
+    init(weatherSession: URLSession) {
+        self.weatherSession = weatherSession
+    }
     
+    // MARK: - Sending alert notification
+    private func sendAlertNotification(message : String) {
+        let alertName = Notification.Name("alertDisplay")
+        NotificationCenter.default.post(name: alertName, object: nil, userInfo: ["message": message])
+    } // end of sendAlertNotification
     
-    
+    func getMeteo() {
+        
+    }
     
     
     
