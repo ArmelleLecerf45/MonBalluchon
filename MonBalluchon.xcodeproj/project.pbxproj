@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D503949D2662A5BC00143FE1 /* WelcomeTranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */; };
+		D51AD14C27F4EA2000371B37 /* WelcomeMeteoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AD14B27F4EA2000371B37 /* WelcomeMeteoViewController.swift */; };
+		D51AD14E27F4EA6E00371B37 /* MeteoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AD14D27F4EA6E00371B37 /* MeteoViewController.swift */; };
 		D51E7F6C2757C7EE006804E0 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E7F6B2757C7EE006804E0 /* Conversion.swift */; };
 		D51E7F6E2757FE69006804E0 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E7F6D2757FE69006804E0 /* Translation.swift */; };
 		D53EC0CC273743B000D4C608 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53EC0CB273743B000D4C608 /* Weather.swift */; };
@@ -17,7 +19,6 @@
 		D574BC3C273076FA006B3FD5 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3B273076FA006B3FD5 /* TranslationService.swift */; };
 		D574BC3E2730772A006B3FD5 /* ConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3D2730772A006B3FD5 /* ConversionService.swift */; };
 		D579CFD827D39809003FADFA /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579CFD727D39809003FADFA /* ConversionViewController.swift */; };
-		D5BEC5692663D8B700404316 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BEC5682663D8B700404316 /* WeatherViewController.swift */; };
 		D5C82C7226656E5300C11771 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C82C7126656E5300C11771 /* TranslationViewController.swift */; };
 		D5E9EFBD265EC192005E57EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9EFBC265EC192005E57EA /* AppDelegate.swift */; };
 		D5E9EFBF265EC192005E57EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9EFBE265EC192005E57EA /* SceneDelegate.swift */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTranslationViewController.swift; sourceTree = "<group>"; };
+		D51AD14B27F4EA2000371B37 /* WelcomeMeteoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMeteoViewController.swift; sourceTree = "<group>"; };
+		D51AD14D27F4EA6E00371B37 /* MeteoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoViewController.swift; sourceTree = "<group>"; };
 		D51E7F6B2757C7EE006804E0 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 		D51E7F6D2757FE69006804E0 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		D53EC0CB273743B000D4C608 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -38,7 +41,6 @@
 		D574BC3B273076FA006B3FD5 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		D574BC3D2730772A006B3FD5 /* ConversionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionService.swift; sourceTree = "<group>"; };
 		D579CFD727D39809003FADFA /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../../../../ConversionViewController.swift; sourceTree = "<group>"; };
-		D5BEC5682663D8B700404316 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		D5C82C7126656E5300C11771 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		D5E9EFB9265EC192005E57EA /* MonBalluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonBalluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E9EFBC265EC192005E57EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +86,9 @@
 				D579CFD727D39809003FADFA /* ConversionViewController.swift */,
 				D5C82C7126656E5300C11771 /* TranslationViewController.swift */,
 				D54C8A392662D196001AD099 /* WelcomeConversionViewController.swift */,
+				D51AD14B27F4EA2000371B37 /* WelcomeMeteoViewController.swift */,
+				D51AD14D27F4EA6E00371B37 /* MeteoViewController.swift */,
 				D503949C2662A5BC00143FE1 /* WelcomeTranslationViewController.swift */,
-				D5BEC5682663D8B700404316 /* WeatherViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,10 +210,10 @@
 			files = (
 				D574BC3C273076FA006B3FD5 /* TranslationService.swift in Sources */,
 				D574BC3E2730772A006B3FD5 /* ConversionService.swift in Sources */,
-				D5BEC5692663D8B700404316 /* WeatherViewController.swift in Sources */,
 				D55BCD2927BE9F9100B51DAA /* xcuserdata.swift in Sources */,
 				D579CFD827D39809003FADFA /* ConversionViewController.swift in Sources */,
 				D54C8A3A2662D196001AD099 /* WelcomeConversionViewController.swift in Sources */,
+				D51AD14C27F4EA2000371B37 /* WelcomeMeteoViewController.swift in Sources */,
 				D574BC3A27307663006B3FD5 /* WeatherService.swift in Sources */,
 				D5C82C7226656E5300C11771 /* TranslationViewController.swift in Sources */,
 				D5E9EFBD265EC192005E57EA /* AppDelegate.swift in Sources */,
@@ -218,6 +221,7 @@
 				D5E9EFBF265EC192005E57EA /* SceneDelegate.swift in Sources */,
 				D5FB923D27F1BD4A00FBE869 /* MeteoService.swift in Sources */,
 				D51E7F6C2757C7EE006804E0 /* Conversion.swift in Sources */,
+				D51AD14E27F4EA6E00371B37 /* MeteoViewController.swift in Sources */,
 				D503949D2662A5BC00143FE1 /* WelcomeTranslationViewController.swift in Sources */,
 				D51E7F6E2757FE69006804E0 /* Translation.swift in Sources */,
 			);
