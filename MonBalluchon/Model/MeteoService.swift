@@ -42,7 +42,7 @@ class MeteoService {
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     callback(false, nil)
                     print("No response from meteoSession")
-                    self.sendAlertNotification(message: "No response from server, \nPlease check town's name !")
+                    self.sendAlertNotification(message: "Please choose a town !")
                     return
                 }
                 print("response status OK")

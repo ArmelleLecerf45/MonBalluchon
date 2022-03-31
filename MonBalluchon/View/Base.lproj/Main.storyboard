@@ -227,6 +227,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="searchTownButtonTaped" destination="U45-qr-OWi" eventType="touchUpInside" id="b6Z-8n-rIo"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="choisir une ville" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cAT-Do-x8h">
                                         <rect key="frame" x="5" y="8.5" width="192.5" height="39.5"/>
@@ -271,6 +274,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="imZ-VJ-5tm"/>
+                    <connections>
+                        <outlet property="NYConditions" destination="Fsg-pA-0nx" id="Iaa-da-Rcd"/>
+                        <outlet property="NYIcon" destination="lAB-9G-Sjn" id="doh-bO-xve"/>
+                        <outlet property="NYTemp" destination="Hq3-RC-itV" id="xJj-nG-EWG"/>
+                        <outlet property="TownIchosed" destination="SnG-sr-v2S" id="stj-St-RWV"/>
+                        <outlet property="activityIndicator" destination="g8V-eX-U8d" id="Pm2-Pa-eWs"/>
+                        <outlet property="choosenTown" destination="cAT-Do-x8h" id="Y7Q-vB-GLr"/>
+                        <outlet property="chosenTownConditions" destination="0WX-1f-YoN" id="cQ7-D6-XMa"/>
+                        <outlet property="chosenTownIcon" destination="aMX-mt-e0I" id="IQG-3d-BHm"/>
+                        <outlet property="chosenTownTemp" destination="MPp-J5-34f" id="erh-cZ-k6t"/>
+                        <outlet property="dayDate" destination="Dg7-PF-aSl" id="5xw-ja-GEg"/>
+                        <outlet property="newYorkname" destination="iiA-aF-yXm" id="ZyU-hw-pCi"/>
+                        <outlet property="searchTownButton" destination="Cbf-ch-gva" id="cFX-pf-CYg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1N-bh-4Au" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

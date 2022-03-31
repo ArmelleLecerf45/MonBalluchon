@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "brume.png",
+      "filename" : "brume@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "brume@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "brume@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
