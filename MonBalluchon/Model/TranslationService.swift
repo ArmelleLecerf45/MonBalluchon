@@ -51,7 +51,7 @@ class TranslationService{
                 guard let responseJSON = try? JSONDecoder().decode(Datas.self, from: data) else {
                     callback(false, nil)
                     print("Failed to decode translationJSON")
-                    self.sendAlertNotification(message: "Impossible de traiter la réponse du serveur ")
+                    self.sendAlertNotification(message: "Impossible to treat server's response ")
                     return
                 }
                 print("JSON OK")

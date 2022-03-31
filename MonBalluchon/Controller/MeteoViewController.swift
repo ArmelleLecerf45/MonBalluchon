@@ -27,7 +27,11 @@ class MeteoViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(presentAlert(notification:)), name: Notification.Name("alertDisplay"), object: nil)
         activityIndicator.isHidden = true
+        
         searchTownButtonTaped()
+        
+        TownIchosed.textColor = .blue
+        newYorkname.textColor = .purple
     } // end of viewDidLoad
 
     @objc private func presentAlert(notification : Notification) {
@@ -84,6 +88,7 @@ class MeteoViewController: UIViewController {
         dayDate.text = MeteoService.shared.convertDt(dt: weather.dt)
         chosenTownIcon.image = UIImage(named: "\(weather.weather[0].icon).png")
         chosenTownConditions.text = weather.weather[0].description
+        TownIchosed.text = choosenTown.text
     } // end fo displayWeatherInfo
 
     private func toggleActivityIndicator(shown: Bool) {

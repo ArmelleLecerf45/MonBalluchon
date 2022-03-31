@@ -18,6 +18,9 @@
 		D574BC3C273076FA006B3FD5 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3B273076FA006B3FD5 /* TranslationService.swift */; };
 		D574BC3E2730772A006B3FD5 /* ConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3D2730772A006B3FD5 /* ConversionService.swift */; };
 		D579CFD827D39809003FADFA /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579CFD727D39809003FADFA /* ConversionViewController.swift */; };
+		D5958D8427F5A7180071ECD6 /* Meteo.json in Resources */ = {isa = PBXBuildFile; fileRef = D5958D8327F5A7180071ECD6 /* Meteo.json */; };
+		D5958D8627F5A7DF0071ECD6 /* Conversion.json in Resources */ = {isa = PBXBuildFile; fileRef = D5958D8527F5A7DF0071ECD6 /* Conversion.json */; };
+		D5958D8827F5A8310071ECD6 /* Translation.json in Resources */ = {isa = PBXBuildFile; fileRef = D5958D8727F5A8310071ECD6 /* Translation.json */; };
 		D5C82C7226656E5300C11771 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C82C7126656E5300C11771 /* TranslationViewController.swift */; };
 		D5E9EFBD265EC192005E57EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9EFBC265EC192005E57EA /* AppDelegate.swift */; };
 		D5E9EFBF265EC192005E57EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9EFBE265EC192005E57EA /* SceneDelegate.swift */; };
@@ -39,6 +42,9 @@
 		D574BC3B273076FA006B3FD5 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		D574BC3D2730772A006B3FD5 /* ConversionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionService.swift; sourceTree = "<group>"; };
 		D579CFD727D39809003FADFA /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../../../../ConversionViewController.swift; sourceTree = "<group>"; };
+		D5958D8327F5A7180071ECD6 /* Meteo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Meteo.json; sourceTree = "<group>"; };
+		D5958D8527F5A7DF0071ECD6 /* Conversion.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Conversion.json; sourceTree = "<group>"; };
+		D5958D8727F5A8310071ECD6 /* Translation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Translation.json; sourceTree = "<group>"; };
 		D5C82C7126656E5300C11771 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		D5E9EFB9265EC192005E57EA /* MonBalluchon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonBalluchon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E9EFBC265EC192005E57EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,10 +111,29 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D5958D8127F5A5A90071ECD6 /* MonBalluchonTest */ = {
+			isa = PBXGroup;
+			children = (
+				D5958D8227F5A5D20071ECD6 /* Json Test */,
+			);
+			path = MonBalluchonTest;
+			sourceTree = "<group>";
+		};
+		D5958D8227F5A5D20071ECD6 /* Json Test */ = {
+			isa = PBXGroup;
+			children = (
+				D5958D8327F5A7180071ECD6 /* Meteo.json */,
+				D5958D8527F5A7DF0071ECD6 /* Conversion.json */,
+				D5958D8727F5A8310071ECD6 /* Translation.json */,
+			);
+			path = "Json Test";
+			sourceTree = "<group>";
+		};
 		D5E9EFB0265EC192005E57EA = {
 			isa = PBXGroup;
 			children = (
 				D5E9EFBB265EC192005E57EA /* MonBalluchon */,
+				D5958D8127F5A5A90071ECD6 /* MonBalluchonTest */,
 				D5E9EFBA265EC192005E57EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -192,9 +217,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5958D8427F5A7180071ECD6 /* Meteo.json in Resources */,
+				D5958D8627F5A7DF0071ECD6 /* Conversion.json in Resources */,
 				D5E9EFC9265EC193005E57EA /* LaunchScreen.storyboard in Resources */,
 				D5E9EFC6265EC193005E57EA /* Assets.xcassets in Resources */,
 				D5E9EFC4265EC192005E57EA /* Main.storyboard in Resources */,
+				D5958D8827F5A8310071ECD6 /* Translation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

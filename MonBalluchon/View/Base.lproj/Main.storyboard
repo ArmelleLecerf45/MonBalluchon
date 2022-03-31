@@ -37,7 +37,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CaK-au-Eak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1162" y="-1032"/>
+            <point key="canvasLocation" x="-961" y="-1288"/>
         </scene>
         <!--Welcome Meteo View Controller-->
         <scene sceneID="n3G-va-0gt">
@@ -66,7 +66,7 @@
                                     <fontDescription key="titleFontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="U45-qr-OWi" kind="show" id="dRG-S3-THs"/>
+                                    <segue destination="U45-qr-OWi" kind="show" id="Ddr-3q-7X5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -115,7 +115,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="JVH-4e-DZs"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -128,7 +128,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conditions" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsg-pA-0nx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsg-pA-0nx">
                                                 <rect key="frame" x="120" y="172" width="249" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Pvh-NP-kla"/>
@@ -169,7 +169,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="7h2-SJ-kx2"/>
                                                     <constraint firstAttribute="height" constant="35" id="Eje-H3-rIF"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -189,7 +189,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conditions" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WX-1f-YoN">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WX-1f-YoN">
                                                 <rect key="frame" x="120" y="167" width="254" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="2fP-4a-xuS"/>
@@ -291,14 +291,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1N-bh-4Au" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998.55072463768124" y="-1324.5535714285713"/>
+            <point key="canvasLocation" x="1110" y="-1288"/>
         </scene>
         <!--Translation-->
         <scene sceneID="408-tM-sDb">
             <objects>
                 <navigationController id="toF-AZ-TAd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Translation" id="Se8-fi-vBs">
-                        <imageReference key="image" image="cube.transparent" catalog="system" symbolScale="large"/>
+                    <tabBarItem key="tabBarItem" title="Translation" landscapeImage="Traduction" largeContentSizeImage="Traduction" id="Se8-fi-vBs">
+                        <imageReference key="image" image="cube.transparent" catalog="system" symbolScale="large" renderingMode="original"/>
                         <imageReference key="selectedImage" image="cube.transparent" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="csa-Sy-T6Y">
@@ -361,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFv-gq-k4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="-269"/>
+            <point key="canvasLocation" x="220" y="-280"/>
         </scene>
         <!--Translation View Controller-->
         <scene sceneID="mo1-2z-SCM">
@@ -461,7 +461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaD-m6-P6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="-269.43127962085305"/>
+            <point key="canvasLocation" x="1472" y="-281"/>
         </scene>
         <!--Conversion-->
         <scene sceneID="HCo-VY-noA">
@@ -533,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHN-iI-Qog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="580"/>
+            <point key="canvasLocation" x="286" y="570"/>
         </scene>
         <!--Conversion View Controller-->
         <scene sceneID="GIo-gz-y7Z">
@@ -659,7 +659,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAb-Pa-ksz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500.0000000000002" y="579.24107142857144"/>
+            <point key="canvasLocation" x="1471" y="570"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZGQ-C0-ePD">
@@ -726,8 +726,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemPurpleColor"/>
-                        <color key="barTintColor" systemColor="systemPurpleColor"/>
+                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                        <color key="barTintColor" systemColor="systemOrangeColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="toF-AZ-TAd" kind="relationship" relationship="viewControllers" id="2Gu-dx-7Pa"/>

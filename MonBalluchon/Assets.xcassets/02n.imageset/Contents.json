@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "nuageux@1x.png",
+      "filename" : "Capture d’écran 2022-03-31 à 06.11.56@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "nuageux@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "nuageux@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
