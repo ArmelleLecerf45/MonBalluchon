@@ -10,7 +10,7 @@ import UIKit
 class TranslationViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - PickerView elements
-    let targetLanguages = ["Anglais", "Français", "Allemand", "Espagnol", "Italien", "Russe"]
+    let targetLanguages = ["Anglais", "Français", "Allemand", "Espagnol", "Italien", "Russe", "Grec", "Portugais"]
 
     // MARK: - IBOutlet
   

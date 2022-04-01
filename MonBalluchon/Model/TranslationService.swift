@@ -107,6 +107,12 @@ class TranslationService{
         case 5 :
             language = "ru"
             return language
+        case 6 :
+            language = "el"
+            return language
+        case 7 :
+            language = "pt"
+            return language
         default:
             sendAlertNotification(message: "cette langue n'est pas disponible")
             return "en"
