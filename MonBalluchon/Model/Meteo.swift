@@ -1,8 +1,8 @@
 //
-//  Weather.swift
+//  Meteo.swift
 //  MonBalluchon
 //
-//  Created by macmini-Armelle on 07/11/2021.
+//  Created by macmini-Armelle on 01/04/2022.
 //
 
 import Foundation

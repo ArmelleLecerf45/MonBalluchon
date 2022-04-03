@@ -9,10 +9,10 @@ import UIKit
 
 class WelcomeMeteoViewController: UIViewController {
 
+    @IBOutlet weak var VersMeteoViewController: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
 

@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,6 +82,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s9G-2Q-0Fg"/>
+                    <connections>
+                        <outlet property="VersMeteoViewController" destination="MJP-mo-Z3F" id="CNX-PA-o1F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIS-7w-mt9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -667,12 +671,12 @@
         <!--View Controller-->
         <scene sceneID="ZGQ-C0-ePD">
             <objects>
-                <viewController id="b3s-rN-3r3" sceneMemberID="viewController">
+                <viewController id="b3s-rN-3r3" customClass="ViewController" customModule="MonBalluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KkZ-Zp-Hy0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le Balluchon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uG-TB-fvU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le Baluchon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uG-TB-fvU">
                                 <rect key="frame" x="20" y="54" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="iY6-9h-BY4"/>
@@ -687,35 +691,38 @@
                                     <constraint firstAttribute="height" constant="250" id="dlN-nq-Ch6"/>
                                     <constraint firstAttribute="width" secondItem="wEt-Ci-y9E" secondAttribute="height" multiplier="1:1" id="wrE-zh-Ajc"/>
                                 </constraints>
-                                <color key="tintColor" red="0.86258782280000001" green="0.75384839110000001" blue="0.54190435540000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="le baluchon">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="B">
-                                            <attributes>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" image="SacADos" title="." cornerStyle="dynamic"/>
                                 <connections>
+                                    <action selector="roundedImage" destination="ZwG-dO-DYl" eventType="touchUpInside" id="D5y-3H-GEb"/>
                                     <segue destination="zo5-jK-5qV" kind="show" id="P2f-eR-f9X"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour entrer, cliquez sur l'image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17H-z4-eat">
+                                <rect key="frame" x="62" y="712" width="290.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="k04-oE-InD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gPW-7y-VF6"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="gPW-7y-VF6" firstAttribute="trailing" secondItem="8uG-TB-fvU" secondAttribute="trailing" constant="20" id="2Ue-ay-gX5"/>
+                            <constraint firstItem="17H-z4-eat" firstAttribute="centerX" secondItem="KkZ-Zp-Hy0" secondAttribute="centerX" id="BY1-DD-bKI"/>
                             <constraint firstItem="wEt-Ci-y9E" firstAttribute="centerX" secondItem="KkZ-Zp-Hy0" secondAttribute="centerX" id="CqF-1I-fwd"/>
                             <constraint firstItem="8uG-TB-fvU" firstAttribute="leading" secondItem="gPW-7y-VF6" secondAttribute="leading" constant="20" id="E04-lk-lIY"/>
                             <constraint firstItem="8uG-TB-fvU" firstAttribute="top" secondItem="gPW-7y-VF6" secondAttribute="top" constant="10" id="HW4-Fp-YSX"/>
+                            <constraint firstItem="gPW-7y-VF6" firstAttribute="bottom" secondItem="17H-z4-eat" secondAttribute="bottom" constant="100" id="Hk7-3j-AuT"/>
                             <constraint firstItem="wEt-Ci-y9E" firstAttribute="centerY" secondItem="KkZ-Zp-Hy0" secondAttribute="centerY" id="tSB-kP-wXg"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9r-T1-EOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZwG-dO-DYl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-3199" y="-371"/>
         </scene>
@@ -744,13 +751,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SacADos" width="246" height="258.5"/>
         <image name="Traduction" width="500" height="510"/>
         <image name="conversion" width="500" height="347"/>
         <image name="cube.transparent" catalog="system" width="128" height="124"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="le baluchon" width="320" height="320"/>
         <image name="meteo" width="1223" height="1198"/>
         <image name="sunrise" catalog="system" width="128" height="97"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

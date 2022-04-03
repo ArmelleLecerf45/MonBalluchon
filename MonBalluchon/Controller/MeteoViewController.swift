@@ -62,7 +62,7 @@ class MeteoViewController: UIViewController {
      
         toggleActivityIndicator(shown: true)
         choosenTown.resignFirstResponder()
-        MeteoService.shared.getMeteo(city: choosenTown.text!) { (true, searchWeather) in
+        MeteoService.shared.getMeteo(town: choosenTown.text!) { (true, searchWeather) in
             self.toggleActivityIndicator(shown: false)
             if true, let resultWeather = searchWeather {
                 self.displayWeatherInfo(weather: resultWeather)
@@ -72,10 +72,11 @@ class MeteoViewController: UIViewController {
     }// end of searchButtonTaped
 
     private func NYWeatherUpdate() {
-        MeteoService.shared.getMeteo(city: "new york") { (true, searchWeather) in
+        MeteoService.shared.getMeteo(town: "new york") { (true, searchWeather) in
             if true, let NYWeather = searchWeather {
-                let NYdegreeInt = Int(NYWeather.main.temp)
-                self.NYTemp.text = "\(NYdegreeInt)°C"
+                let NYdegreeDec = String(NYWeather.main.temp)
+               
+                self.NYTemp.text = "\(NYdegreeDec)°C"
                 self.NYIcon.image = UIImage(named: "\(NYWeather.weather[0].icon).png")
                 self.NYConditions.text = NYWeather.weather[0].description
             }
@@ -83,8 +84,11 @@ class MeteoViewController: UIViewController {
     } // end of NYWeatherUpdate
 
     private func displayWeatherInfo(weather: MyData) {
-        let degreeInt = Int(weather.main.temp)
-        chosenTownTemp.text = "\(degreeInt)°C"
+       
+        let degreeDec = String(weather.main.temp)
+       
+        
+        chosenTownTemp.text = "\(degreeDec)°C"
         dayDate.text = MeteoService.shared.convertDt(dt: weather.dt)
         chosenTownIcon.image = UIImage(named: "\(weather.weather[0].icon).png")
         chosenTownConditions.text = weather.weather[0].description
