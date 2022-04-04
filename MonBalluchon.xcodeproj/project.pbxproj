@@ -17,6 +17,7 @@
 		D56AE7F227FB934A001542E0 /* Meteo.json in Resources */ = {isa = PBXBuildFile; fileRef = D56AE7F127FB934A001542E0 /* Meteo.json */; };
 		D56AE7F427FB9371001542E0 /* Conversion.json in Resources */ = {isa = PBXBuildFile; fileRef = D56AE7F327FB9371001542E0 /* Conversion.json */; };
 		D56AE7F627FB9393001542E0 /* Translation.json in Resources */ = {isa = PBXBuildFile; fileRef = D56AE7F527FB9393001542E0 /* Translation.json */; };
+		D56AE7F827FB97C7001542E0 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56AE7F727FB97C7001542E0 /* FakeResponseData.swift */; };
 		D574BC3C273076FA006B3FD5 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3B273076FA006B3FD5 /* TranslationService.swift */; };
 		D574BC3E2730772A006B3FD5 /* ConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3D2730772A006B3FD5 /* ConversionService.swift */; };
 		D579CFD827D39809003FADFA /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579CFD727D39809003FADFA /* ConversionViewController.swift */; };
@@ -54,6 +55,7 @@
 		D56AE7F127FB934A001542E0 /* Meteo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Meteo.json; sourceTree = "<group>"; };
 		D56AE7F327FB9371001542E0 /* Conversion.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Conversion.json; sourceTree = "<group>"; };
 		D56AE7F527FB9393001542E0 /* Translation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Translation.json; sourceTree = "<group>"; };
+		D56AE7F727FB97C7001542E0 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
 		D574BC3B273076FA006B3FD5 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		D574BC3D2730772A006B3FD5 /* ConversionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionService.swift; sourceTree = "<group>"; };
 		D579CFD727D39809003FADFA /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../../../../ConversionViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				D5E38E8327FA31E60003B519 /* TranslationServiceTestCase.swift */,
 				D5E38E8527FA32140003B519 /* ConversionServiceTestCase.swift */,
 				D5E38E8727FA323E0003B519 /* MeteoServiceTestCase.swift */,
+				D56AE7F727FB97C7001542E0 /* FakeResponseData.swift */,
 			);
 			path = MonBalluchonTests;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5E38E8627FA32140003B519 /* ConversionServiceTestCase.swift in Sources */,
+				D56AE7F827FB97C7001542E0 /* FakeResponseData.swift in Sources */,
 				D5E38E8427FA31E60003B519 /* TranslationServiceTestCase.swift in Sources */,
 				D5E38E8827FA323E0003B519 /* MeteoServiceTestCase.swift in Sources */,
 			);
