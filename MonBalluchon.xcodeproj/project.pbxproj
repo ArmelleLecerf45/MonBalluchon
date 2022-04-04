@@ -14,6 +14,9 @@
 		D51E7F6E2757FE69006804E0 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E7F6D2757FE69006804E0 /* Translation.swift */; };
 		D54C8A3A2662D196001AD099 /* WelcomeConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54C8A392662D196001AD099 /* WelcomeConversionViewController.swift */; };
 		D55BCD2927BE9F9100B51DAA /* xcuserdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BCD2827BE9F9100B51DAA /* xcuserdata.swift */; };
+		D56AE7F227FB934A001542E0 /* Meteo.json in Resources */ = {isa = PBXBuildFile; fileRef = D56AE7F127FB934A001542E0 /* Meteo.json */; };
+		D56AE7F427FB9371001542E0 /* Conversion.json in Resources */ = {isa = PBXBuildFile; fileRef = D56AE7F327FB9371001542E0 /* Conversion.json */; };
+		D56AE7F627FB9393001542E0 /* Translation.json in Resources */ = {isa = PBXBuildFile; fileRef = D56AE7F527FB9393001542E0 /* Translation.json */; };
 		D574BC3C273076FA006B3FD5 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3B273076FA006B3FD5 /* TranslationService.swift */; };
 		D574BC3E2730772A006B3FD5 /* ConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3D2730772A006B3FD5 /* ConversionService.swift */; };
 		D579CFD827D39809003FADFA /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579CFD727D39809003FADFA /* ConversionViewController.swift */; };
@@ -48,6 +51,9 @@
 		D51E7F6D2757FE69006804E0 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		D54C8A392662D196001AD099 /* WelcomeConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeConversionViewController.swift; sourceTree = "<group>"; };
 		D55BCD2827BE9F9100B51DAA /* xcuserdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xcuserdata.swift; sourceTree = "<group>"; };
+		D56AE7F127FB934A001542E0 /* Meteo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Meteo.json; sourceTree = "<group>"; };
+		D56AE7F327FB9371001542E0 /* Conversion.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Conversion.json; sourceTree = "<group>"; };
+		D56AE7F527FB9393001542E0 /* Translation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Translation.json; sourceTree = "<group>"; };
 		D574BC3B273076FA006B3FD5 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		D574BC3D2730772A006B3FD5 /* ConversionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionService.swift; sourceTree = "<group>"; };
 		D579CFD727D39809003FADFA /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../../../../ConversionViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,16 @@
 			path = xcuserdata;
 			sourceTree = "<group>";
 		};
+		D56AE7F027FB92C2001542E0 /* JSONTests */ = {
+			isa = PBXGroup;
+			children = (
+				D56AE7F127FB934A001542E0 /* Meteo.json */,
+				D56AE7F327FB9371001542E0 /* Conversion.json */,
+				D56AE7F527FB9393001542E0 /* Translation.json */,
+			);
+			path = JSONTests;
+			sourceTree = "<group>";
+		};
 		D570150726657F28000B50D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +148,7 @@
 		D5E38E7927F9ECEB0003B519 /* MonBalluchonTests */ = {
 			isa = PBXGroup;
 			children = (
+				D56AE7F027FB92C2001542E0 /* JSONTests */,
 				D5E38E8327FA31E60003B519 /* TranslationServiceTestCase.swift */,
 				D5E38E8527FA32140003B519 /* ConversionServiceTestCase.swift */,
 				D5E38E8727FA323E0003B519 /* MeteoServiceTestCase.swift */,
@@ -251,6 +268,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56AE7F227FB934A001542E0 /* Meteo.json in Resources */,
+				D56AE7F427FB9371001542E0 /* Conversion.json in Resources */,
+				D56AE7F627FB9393001542E0 /* Translation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

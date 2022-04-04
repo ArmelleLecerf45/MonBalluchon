@@ -6,7 +6,7 @@
 //
 
 import XCTest
-
+@testable import MonBalluchon
 class TranslationServiceTestCase: XCTestCase {
 
     override func setUpWithError() throws {

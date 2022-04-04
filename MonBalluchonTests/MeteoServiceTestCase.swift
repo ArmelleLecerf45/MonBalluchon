@@ -6,7 +6,7 @@
 //
 
 import XCTest
-
+@testable import MonBalluchon
 class MeteoServiceTestCase: XCTestCase {
 
     override func setUpWithError() throws {
