@@ -56,14 +56,14 @@ class ConversionService{
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
                     callback(false, nil)
-                    self.sendAlertNotification(message: "Absence de réponse du serveur")
+                    self.sendAlertNotification(message: "no server's response")
                     return
                 }
                 print("data OK")
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     callback(false, nil)
                     print("No response from conversionSession")
-                    self.sendAlertNotification(message: "Absence de réponse du serveur, \nVeuillez vérifier la monnaie choisie !")
+                    self.sendAlertNotification(message: "no servers's answer, \nPlease check the chosen monnaie !")
                     return
                 }
                 print("response status OK")
@@ -124,7 +124,7 @@ class ConversionService{
         if let doubleGrade = grade?.doubleValue {
             return doubleGrade
         } else {
-            sendAlertNotification(message: "Le nombre est incorrect !\nVeuillez corriger la saisie.")
+            sendAlertNotification(message: "false number !\nplease, correct.")
             return 0.0
         }
     } // end of func stringToDouble
