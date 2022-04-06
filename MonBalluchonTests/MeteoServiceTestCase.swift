@@ -8,28 +8,46 @@
 import XCTest
 @testable import MonBalluchon
 class MeteoServiceTestCase: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    var meteo : MeteoService!
+    func testGetWeatherInEnglishShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
+        // Given
+        TestURLProtocol.loadingHandler = { request in
+            let response: HTTPURLResponse = FakeResponseData.responseOK
+            let error: Error? = nil
+            let data: Data? = FakeResponseData.weatherCorrectData
+            return (response, data, error)
         }
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [TestURLProtocol.self]
+        let session = URLSession(configuration: configuration)
+        let weatherService = MeteoService(meteoSession: session)
+        // When
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        weatherService.getMeteo(town: "New York") { (success, weatherResult) in
+            let temp = 4.83
+            let id = 804
+            // Then
+            XCTAssertTrue(success)
+            XCTAssertNotNil(weatherResult)
+            XCTAssertEqual(temp, weatherResult?.main.temp)
+            XCTAssertEqual(id, weatherResult?.weather[0].id)
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 1)
+    }
+
+   
+
+    
+
+    
+    // MARK: -  function convertDt tests
+    func testConvertDt() {
+        let dt = 1648717133
+        let date = meteo.convertDt(dt: dt)
+        let dateString = "31 mars 2022 à 10:58"
+        XCTAssertEqual(date, dateString)
+
     }
 
 }
