@@ -75,7 +75,6 @@ class MeteoViewController: UIViewController {
         MeteoService.shared.getMeteo(town: "new york") { (true, searchWeather) in
             if true, let NYWeather = searchWeather {
                 let NYdegreeDec = String(NYWeather.main.temp)
-               
                 self.NYTemp.text = "\(NYdegreeDec)°C"
                 self.NYIcon.image = UIImage(named: "\(NYWeather.weather[0].icon).png")
                 self.NYConditions.text = NYWeather.weather[0].description

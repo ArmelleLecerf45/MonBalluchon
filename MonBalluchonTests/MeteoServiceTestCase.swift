@@ -43,7 +43,12 @@ class MeteoServiceTestCase: XCTestCase {
     
     // MARK: -  function convertDt test
     func testConvertDt() {
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [TestURLProtocol.self]
+        let session = URLSession(configuration: configuration)
+        let meteo = MeteoService(meteoSession: session)
         let dt = 1649332990
+    
         let dateDuJour = meteo.convertDt(dt:dt)
         let dateString = "04-07-2022 à 14:03"
         XCTAssertEqual(dateDuJour, dateString)

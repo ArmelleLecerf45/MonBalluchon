@@ -90,7 +90,7 @@ class MeteoService {
         let date = Date(timeIntervalSince1970: TimeInterval(dt))
         let dayTimePeriodFormatter = DateFormatter()
         dayTimePeriodFormatter.locale = Locale(identifier: "fr_FR")
-        dayTimePeriodFormatter.dateFormat = "MM -dd-yyyy à HH:mm"
+        dayTimePeriodFormatter.dateFormat = "MM-dd-yyyy à HH:mm"
 
         let dtString = dayTimePeriodFormatter.string(from: date)
         return dtString
