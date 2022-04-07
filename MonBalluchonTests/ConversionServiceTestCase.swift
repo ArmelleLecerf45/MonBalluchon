@@ -133,18 +133,18 @@ class ConversionServiceTestCase: XCTestCase {
         let conversionService = ConversionService(conversionSession: session)
         // When
         conversionService.getChangeRates{(success, searchRate) in
-            let rate = 1.192897
+            let rate = 1.109607
             let index = 0
-            let date = "2021-06-28"
-            let euroNumber = 2.0
-            let dollarNumber = "2,37"
+            let date = "2022-03-31"
+            let euroNumber = 1.0
+            let dollarNumber = "114.5"
             let convert = self.conversion.euroToDollarConvert(euroNumber: euroNumber, index: index)
             // Then
             XCTAssertTrue(success)
             XCTAssertNotNil(searchRate)
             XCTAssertEqual(rate, searchRate!.rates.USD)
             XCTAssertEqual(date, searchRate!.date)
-            XCTAssertEqual(self.conversion.convertDate(date: date), "28-06-2021")
+            XCTAssertEqual(self.conversion.convertDate(date: date), "31-03-2022")
             XCTAssertEqual(convert, dollarNumber)
             expectation.fulfill()
         }

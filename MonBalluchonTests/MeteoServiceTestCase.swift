@@ -24,7 +24,7 @@ class MeteoServiceTestCase: XCTestCase {
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
         weatherService.getMeteo(town: "New York") { (success, weatherResult) in
-            let temp = 4.83
+            let temp = 7.48
             let id = 804
             // Then
             XCTAssertTrue(success)
@@ -41,12 +41,12 @@ class MeteoServiceTestCase: XCTestCase {
     
 
     
-    // MARK: -  function convertDt tests
+    // MARK: -  function convertDt test
     func testConvertDt() {
-        let dt = 1648717133
-        let date = meteo.convertDt(dt: dt)
-        let dateString = "31 mars 2022 à 10:58"
-        XCTAssertEqual(date, dateString)
+        let dt = 1649332990
+        let dateDuJour = meteo.convertDt(dt:dt)
+        let dateString = "04-07-2022 à 14:03"
+        XCTAssertEqual(dateDuJour, dateString)
 
     }
 

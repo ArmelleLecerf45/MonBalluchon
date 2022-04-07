@@ -33,7 +33,7 @@ class ConversionService{
         urlComponents.host = "data.fixer.io"
         urlComponents.path = "/api/latest"
         urlComponents.queryItems = [
-            URLQueryItem(name: "access_key", value: "d52112b86143aa9799e12a236ae0fe4e"),
+            URLQueryItem(name: "access_key", value: "\(conversionAppId)"),
             URLQueryItem(name: "symbols", value: "ARS,AUD,BTC,CAD,CHF,CNY,DZD,GBP,ILS,JPY,RUB,USD")
         ]
         guard let url = urlComponents.url else {

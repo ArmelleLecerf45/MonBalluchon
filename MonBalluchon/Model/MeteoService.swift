@@ -68,7 +68,7 @@ class MeteoService {
         urlComponents.host = "api.openweathermap.org"
         urlComponents.path = "/data/2.5/weather"
         urlComponents.queryItems = [
-            URLQueryItem(name: "APPID", value: "42ef11e464f874781da0ff6e8f8e972d"),
+            URLQueryItem(name: "APPID", value: "\(meteoAppId)"),
             URLQueryItem(name: "units", value: "metric"),
             URLQueryItem(name: "lang", value: "fr"),
             URLQueryItem(name: "q", value: "\(townName)")
@@ -90,7 +90,7 @@ class MeteoService {
         let date = Date(timeIntervalSince1970: TimeInterval(dt))
         let dayTimePeriodFormatter = DateFormatter()
         dayTimePeriodFormatter.locale = Locale(identifier: "fr_FR")
-        dayTimePeriodFormatter.dateFormat = "dd MMM YYYY à HH:mm"
+        dayTimePeriodFormatter.dateFormat = "MM -dd-yyyy à HH:mm"
 
         let dtString = dayTimePeriodFormatter.string(from: date)
         return dtString

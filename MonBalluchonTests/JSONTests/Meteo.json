@@ -7,38 +7,38 @@
         {
             "id": 804,
             "main": "Clouds",
-            "description": "couvert",
-            "icon": "04n"
+            "description": "overcast clouds",
+            "icon": "04d"
         }
     ],
     "base": "stations",
     "main": {
-        "temp": 280.33,
-        "feels_like": 278.58,
-        "temp_min": 277.46,
-        "temp_max": 282.59,
+        "temp": 7.48,
+        "feels_like": 3.8,
+        "temp_min": 6.13,
+        "temp_max": 8.33,
         "pressure": 1011,
-        "humidity": 83
+        "humidity": 84
     },
     "visibility": 10000,
     "wind": {
-        "speed": 2.57,
-        "deg": 60
+        "speed": 6.69,
+        "deg": 80,
+        "gust": 9.77
     },
     "clouds": {
         "all": 100
     },
-    "dt": 1648717133,
+    "dt": 1649332990,
     "sys": {
         "type": 2,
         "id": 2039034,
         "country": "US",
-        "sunrise": 1648723264,
-        "sunset": 1648768738
+        "sunrise": 1649327377,
+        "sunset": 1649373974
     },
     "timezone": -14400,
     "id": 5128581,
     "name": "New York",
     "cod": 200
 }
-
