@@ -63,14 +63,14 @@ class ConversionService{
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                     callback(false, nil)
                     print("No response from conversionSession")
-                    self.sendAlertNotification(message: "no servers's answer, \nPlease check the chosen monnaie !")
+                    self.sendAlertNotification(message: "no servers's answer, \nPlease check the chosen money !")
                     return
                 }
                 print("response status OK")
                 guard let responseJSON = try? JSONDecoder().decode(LastRate.self, from: data) else {
                     callback(false, nil)
                     print("Failed to decode conversionJSON")
-                    self.sendAlertNotification(message: "Impossible de traiter la réponse du serveur ")
+                    self.sendAlertNotification(message: "Impossible to process server's response")
                     return
                 }
                 print("JSON OK")
@@ -124,7 +124,7 @@ class ConversionService{
         if let doubleGrade = grade?.doubleValue {
             return doubleGrade
         } else {
-            sendAlertNotification(message: "false number !\nplease, correct.")
+            sendAlertNotification(message: "incorrect number !\nplease, correct it.")
             return 0.0
         }
     } // end of func stringToDouble

@@ -49,7 +49,7 @@ class MeteoService {
                 guard let responseJSON = try? JSONDecoder().decode(MyData.self, from: data) else {
                     callback(false, nil)
                     print("Failed to decode meteoJSON")
-                    self.sendAlertNotification(message: "Impossible to treat server's response ")
+                    self.sendAlertNotification(message: "failed to process server's response ")
                     return
                 }
                 print("JSON OK")
