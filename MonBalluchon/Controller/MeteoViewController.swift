@@ -37,7 +37,7 @@ class MeteoViewController: UIViewController {
     @objc private func presentAlert(notification : Notification) {
         guard let alertInfo = notification.userInfo!["message"] as? String else { return }
 
-        let alert = UIAlertController(title: "Erreur", message: alertInfo, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Your attention", message: alertInfo, preferredStyle: .alert)
         let action  = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
