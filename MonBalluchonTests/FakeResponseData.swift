@@ -1,4 +1,3 @@
-//
 //  FakeResponseData.swift
 //  MonBalluchonTests
 //
