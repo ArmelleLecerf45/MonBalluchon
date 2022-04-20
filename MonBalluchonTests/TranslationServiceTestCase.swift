@@ -149,6 +149,33 @@ class TranslationServiceTestCase: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.01)
     }
+    func testGetTranslationInDeutschShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
+        // Given
+        TestURLProtocol.loadingHandler = { request in
+            let response: HTTPURLResponse = FakeResponseData.responseOK
+            let error: Error? = nil
+            let data: Data? = FakeResponseData.translationCorrectData
+            return (response, data, error)
+        }
+        let expectation = XCTestExpectation(description: "Wait for queue change.")
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [TestURLProtocol.self]
+        let session = URLSession(configuration: configuration)
+        let translationService = TranslationService(translationSession: session)
+         // When
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { (success, traductedResponse) in
+            let text = "Hallo"
+            let detectedSourceLanguage = "fr"
+            
+            // Then
+            XCTAssertTrue(success)
+            XCTAssertNotNil(traductedResponse)
+            XCTAssertEqual(text, traductedResponse!.data.translations[0].translatedText)
+            XCTAssertEqual(detectedSourceLanguage, traductedResponse!.data.translations[0].detectedSourceLanguage)
 
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 0.01)
+    }
    
 }
