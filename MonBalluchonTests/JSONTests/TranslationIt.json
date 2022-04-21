@@ -1,10 +1,10 @@
 {
-"data": {
-    "translations": [
-        {
-            "translatedText": "Buongiorno",
-            "detectedSourceLanguage": "fr"
-        }
-    ]
-}
+    "data": {
+        "translations": [
+            {
+                "translatedText": "il mio gatto è nero",
+                "detectedSourceLanguage": "fr"
+            }
+        ]
+    }
 }

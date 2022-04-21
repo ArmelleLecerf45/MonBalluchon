@@ -10,8 +10,12 @@ import XCTest
 class TranslationServiceTestCase: XCTestCase {
     var translation: TranslationService!
     private let languageIndex = 0
-    private let textToTranslate = "bonjour"
-
+    private let text1ToTranslate = "bonjour"
+    private let text2ToTranslate = "La petite fille joue"
+    private let text3ToTranslate = "mon chat est noir"
+    private let text4ToTranslate = "Le papa va travailler"
+    private let text5ToTranslate = "le jardin est grand"
+    private let text6ToTranslate = ""
     override func setUp() {
         super.setUp()
         TestURLProtocol.loadingHandler = { request in
@@ -96,7 +100,7 @@ class TranslationServiceTestCase: XCTestCase {
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
 
-        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { (success, traductedResponse) in
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: text1ToTranslate) { (success, traductedResponse) in
             // Then
             XCTAssertFalse(success)
             XCTAssertNil(traductedResponse)
@@ -120,7 +124,7 @@ class TranslationServiceTestCase: XCTestCase {
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
 
-        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { (success, traductedResponse) in
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: text1ToTranslate) { (success, traductedResponse) in
             // Then
             XCTAssertFalse(success)
             XCTAssertNil(traductedResponse)
@@ -143,7 +147,7 @@ class TranslationServiceTestCase: XCTestCase {
         let translationService = TranslationService(translationSession: session)
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { success, traductedResponse in
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: text1ToTranslate) { success, traductedResponse in
             // Then
             XCTAssertFalse(success)
             XCTAssertNil(traductedResponse)
@@ -166,7 +170,7 @@ class TranslationServiceTestCase: XCTestCase {
         let translationService = TranslationService(translationSession: session)
         // When
         let expectation = XCTestExpectation(description: "Wait for queue change.")
-        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { success, traductedResponse in
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: text1ToTranslate) { success, traductedResponse in
             // Then
             XCTAssertFalse(success)
             XCTAssertNil(traductedResponse)
@@ -189,7 +193,7 @@ class TranslationServiceTestCase: XCTestCase {
         let session = URLSession(configuration: configuration)
         let translationService = TranslationService(translationSession: session)
          // When
-        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { (success, traductedResponse) in
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: text1ToTranslate) { (success, traductedResponse) in
             let text = "Hello"
             let detectedSourceLanguage = "fr"
             
@@ -217,8 +221,8 @@ class TranslationServiceTestCase: XCTestCase {
         let session = URLSession(configuration: configuration)
         let translationService = TranslationService(translationSession: session)
          // When
-        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { (success, traductedResponse) in
-            let text = "Hallo"
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: text2ToTranslate) { (success, traductedResponse) in
+            let text = "das kleine Mädchen spielt"
             let detectedSourceLanguage = "fr"
 
             // Then
@@ -245,8 +249,8 @@ class TranslationServiceTestCase: XCTestCase {
         let session = URLSession(configuration: configuration)
         let translationService = TranslationService(translationSession: session)
          // When
-        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { (success, traductedResponse) in
-            let text = "Buongiorno"
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: text3ToTranslate) { (success, traductedResponse) in
+            let text = "il mio gatto è nero"
             let detectedSourceLanguage = "fr"
 
             // Then
@@ -273,8 +277,8 @@ class TranslationServiceTestCase: XCTestCase {
         let session = URLSession(configuration: configuration)
         let translationService = TranslationService(translationSession: session)
          // When
-        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { (success, traductedResponse) in
-            let text = "Buenos dias"
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: text4ToTranslate) { (success, traductedResponse) in
+            let text = "papá va a trabajar"
             let detectedSourceLanguage = "fr"
 
             // Then
@@ -302,8 +306,8 @@ class TranslationServiceTestCase: XCTestCase {
         let session = URLSession(configuration: configuration)
         let translationService = TranslationService(translationSession: session)
          // When
-        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: textToTranslate) { (success, traductedResponse) in
-            let text = "доброе утро"
+        translationService.getTranslation(languageIndex: languageIndex, textToTranslate: text5ToTranslate) { (success, traductedResponse) in
+            let text = "сад большой"
             let detectedSourceLanguage = "fr"
 
             // Then
@@ -318,3 +322,36 @@ class TranslationServiceTestCase: XCTestCase {
     }
 
 }
+
+//private func selectedLanguage(index: Int) -> String {
+//    let language: String
+//    switch index {
+//    case 0 :
+//        language = "en"
+//        return language
+//    case 1 :
+//        language = "fr"
+//        return language
+//    case 2 :
+//        language = "de"
+//        return language
+//    case 3 :
+//        language = "es"
+//        return language
+//    case 4 :
+//        language = "it"
+//        return language
+//    case 5 :
+//        language = "ru"
+//        return language
+//    case 6 :
+//        language = "el"
+//        return language
+//    case 7 :
+//        language = "pt"
+//        return language
+//    default:
+//        sendAlertNotification(message: "No such language available")
+//        return "en"
+//    }
+//} // end of selectedLanguage
