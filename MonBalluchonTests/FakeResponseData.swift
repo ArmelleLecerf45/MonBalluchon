@@ -22,9 +22,32 @@ class FakeResponseData  {
 
     static var translationCorrectData: Data? {
         let bundle = Bundle(for: FakeResponseData.self)
-        let url = bundle.url(forResource: "Translation", withExtension: "json")!
+        let url = bundle.url(forResource: "TranslationEn", withExtension: "json")!
         return try! Data(contentsOf: url)
     }
+    static var translationCorrectDataDe: Data? {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "TranslationDe", withExtension: "json")!
+        return try! Data(contentsOf: url)
+    }
+   
+    static var translationCorrectDataIt: Data? {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "TranslationIt", withExtension: "json")!
+        return try! Data(contentsOf: url)
+    }
+    static var translationCorrectDataEs: Data? {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "TranslationEs", withExtension: "json")!
+        return try! Data(contentsOf: url)
+    }
+    static var translationCorrectDataRu: Data? {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "TranslationRu", withExtension: "json")!
+        return try! Data(contentsOf: url)
+    }
+   
+   
 
     static let conversionIncorrectData = "erreur".data(using: .utf8)!
     static let weatherIncorrectData = "erreur".data(using: .utf8)!
