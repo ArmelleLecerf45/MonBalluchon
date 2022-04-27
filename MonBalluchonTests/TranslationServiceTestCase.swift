@@ -320,38 +320,200 @@ class TranslationServiceTestCase: XCTestCase {
         }
         wait(for: [expectation], timeout: 0.01)
     }
+    func testLanguageEnglish() {
+            // Given
+            TestURLProtocol.loadingHandler = { request in
+                let response: HTTPURLResponse = FakeResponseData.responseOK
+                let error: Error? = nil
+                let data: Data? = nil
+                return (response, data, error)
+            }
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [TestURLProtocol.self]
+            let session = URLSession(configuration: configuration)
+            let translationService = TranslationService(translationSession: session)
+            // When
+            let expectation = XCTestExpectation(description: "Wait for queue change.")
+            
+            let language = translationService.selectedLanguage(index: 0)
+                // Then
+            XCTAssertTrue(language == "en")
+            expectation.fulfill()
+            wait(for: [expectation], timeout: 0.01)
+        }
+        
+        func testLanguageFrench() {
+            // Given
+            TestURLProtocol.loadingHandler = { request in
+                let response: HTTPURLResponse = FakeResponseData.responseOK
+                let error: Error? = nil
+                let data: Data? = nil
+                return (response, data, error)
+            }
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [TestURLProtocol.self]
+            let session = URLSession(configuration: configuration)
+            let translationService = TranslationService(translationSession: session)
+            // When
+            let expectation = XCTestExpectation(description: "Wait for queue change.")
+            
+            let language = translationService.selectedLanguage(index: 1)
+            // Then
+            XCTAssertTrue(language == "fr")
+            expectation.fulfill()
+            wait(for: [expectation], timeout: 0.01)
+        
+        }
+        
+        func testLanguageGerman() {
+            // Given
+            TestURLProtocol.loadingHandler = { request in
+                let response: HTTPURLResponse = FakeResponseData.responseOK
+                let error: Error? = nil
+                let data: Data? = nil
+                return (response, data, error)
+            }
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [TestURLProtocol.self]
+            let session = URLSession(configuration: configuration)
+            let translationService = TranslationService(translationSession: session)
+            // When
+            let expectation = XCTestExpectation(description: "Wait for queue change.")
+            
+            let language = translationService.selectedLanguage(index: 2)
+            // Then
+            XCTAssertTrue(language == "de")
+            expectation.fulfill()
+            wait(for: [expectation], timeout: 0.01)
+        }
+        
+        func testLanguageSpanish() {
+            // Given
+            TestURLProtocol.loadingHandler = { request in
+                let response: HTTPURLResponse = FakeResponseData.responseOK
+                let error: Error? = nil
+                let data: Data? = nil
+                return (response, data, error)
+            }
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [TestURLProtocol.self]
+            let session = URLSession(configuration: configuration)
+            let translationService = TranslationService(translationSession: session)
+            // When
+            let expectation = XCTestExpectation(description: "Wait for queue change.")
+            
+            let language = translationService.selectedLanguage(index: 3)
+            // Then
+            XCTAssertTrue(language == "es")
+            expectation.fulfill()
+            wait(for: [expectation], timeout: 0.01)
+        }
+        
+        func testLanguageItalian() {
+            // Given
+            TestURLProtocol.loadingHandler = { request in
+                let response: HTTPURLResponse = FakeResponseData.responseOK
+                let error: Error? = nil
+                let data: Data? = nil
+                return (response, data, error)
+            }
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [TestURLProtocol.self]
+            let session = URLSession(configuration: configuration)
+            let translationService = TranslationService(translationSession: session)
+            // When
+            let expectation = XCTestExpectation(description: "Wait for queue change.")
+            
+            let language = translationService.selectedLanguage(index: 4)
+            // Then
+            XCTAssertTrue(language == "it")
+            expectation.fulfill()
+            wait(for: [expectation], timeout: 0.01)
+        }
+        func testLanguageRussian() {
+            // Given
+            TestURLProtocol.loadingHandler = { request in
+                let response: HTTPURLResponse = FakeResponseData.responseOK
+                let error: Error? = nil
+                let data: Data? = nil
+                return (response, data, error)
+            }
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [TestURLProtocol.self]
+            let session = URLSession(configuration: configuration)
+            let translationService = TranslationService(translationSession: session)
+            // When
+            let expectation = XCTestExpectation(description: "Wait for queue change.")
+            
+            let language = translationService.selectedLanguage(index: 5)
+            // Then
+            XCTAssertTrue(language == "ru")
+            expectation.fulfill()
+            wait(for: [expectation], timeout: 0.01)
+        }
+        func testLanguageGreek() {
+            // Given
+            TestURLProtocol.loadingHandler = { request in
+                let response: HTTPURLResponse = FakeResponseData.responseOK
+                let error: Error? = nil
+                let data: Data? = nil
+                return (response, data, error)
+            }
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [TestURLProtocol.self]
+            let session = URLSession(configuration: configuration)
+            let translationService = TranslationService(translationSession: session)
+            // When
+            let expectation = XCTestExpectation(description: "Wait for queue change.")
+            
+            let language = translationService.selectedLanguage(index: 6)
+            // Then
+            XCTAssertTrue(language == "el")
+            expectation.fulfill()
+            wait(for: [expectation], timeout: 0.01)
+        }
+        func testLanguagePortuguese() {
+            // Given
+            TestURLProtocol.loadingHandler = { request in
+                let response: HTTPURLResponse = FakeResponseData.responseOK
+                let error: Error? = nil
+                let data: Data? = nil
+                return (response, data, error)
+            }
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [TestURLProtocol.self]
+            let session = URLSession(configuration: configuration)
+            let translationService = TranslationService(translationSession: session)
+            // When
+            let expectation = XCTestExpectation(description: "Wait for queue change.")
+            
+            let language = translationService.selectedLanguage(index: 7)
+            // Then
+            XCTAssertTrue(language == "pt")
+            expectation.fulfill()
+            wait(for: [expectation], timeout: 0.01)
+        }
+        func testLanguageOther() {
+            // Given
+            TestURLProtocol.loadingHandler = { request in
+                let response: HTTPURLResponse = FakeResponseData.responseOK
+                let error: Error? = nil
+                let data: Data? = nil
+                return (response, data, error)
+            }
+            let configuration = URLSessionConfiguration.ephemeral
+            configuration.protocolClasses = [TestURLProtocol.self]
+            let session = URLSession(configuration: configuration)
+            let translationService = TranslationService(translationSession: session)
+            // When
+            let expectation = XCTestExpectation(description: "Wait for queue change.")
+            
+            let language = translationService.selectedLanguage(index: 99)
+            // Then
+            XCTAssertTrue(language == "en")
+            expectation.fulfill()
+            wait(for: [expectation], timeout: 0.01)
+        }
 
 }
 
-//private func selectedLanguage(index: Int) -> String {
-//    let language: String
-//    switch index {
-//    case 0 :
-//        language = "en"
-//        return language
-//    case 1 :
-//        language = "fr"
-//        return language
-//    case 2 :
-//        language = "de"
-//        return language
-//    case 3 :
-//        language = "es"
-//        return language
-//    case 4 :
-//        language = "it"
-//        return language
-//    case 5 :
-//        language = "ru"
-//        return language
-//    case 6 :
-//        language = "el"
-//        return language
-//    case 7 :
-//        language = "pt"
-//        return language
-//    default:
-//        sendAlertNotification(message: "No such language available")
-//        return "en"
-//    }
-//} // end of selectedLanguage

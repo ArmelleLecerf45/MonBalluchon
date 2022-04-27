@@ -164,6 +164,7 @@ class ConversionServiceTestCase: XCTestCase {
         XCTAssertEqual(doubleError, stringError)
 
     }
+    
 }
    
 

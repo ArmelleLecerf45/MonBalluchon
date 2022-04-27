@@ -86,7 +86,7 @@ class TranslationService{
         return request
     } // end of func createTranslationRequest
 
-    private func selectedLanguage(index: Int) -> String {
+    func selectedLanguage(index: Int) -> String {
         let language: String
         switch index {
         case 0 :

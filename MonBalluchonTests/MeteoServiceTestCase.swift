@@ -36,7 +36,6 @@ class MeteoServiceTestCase: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
 
-   
 
     
 
