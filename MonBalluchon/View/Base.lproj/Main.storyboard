@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b3s-rN-3r3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -690,7 +689,7 @@
                                     <constraint firstAttribute="width" secondItem="wEt-Ci-y9E" secondAttribute="height" multiplier="1:1" id="wrE-zh-Ajc"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="." image="SacADos"/>
+                                <state key="normal" title=".." image="SacADos"/>
                                 <connections>
                                     <action selector="roundedImage" destination="ZwG-dO-DYl" eventType="touchUpInside" id="D5y-3H-GEb"/>
                                     <segue destination="zo5-jK-5qV" kind="show" id="P2f-eR-f9X"/>
