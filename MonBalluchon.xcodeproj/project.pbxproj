@@ -27,6 +27,8 @@
 		D574BC3C273076FA006B3FD5 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3B273076FA006B3FD5 /* TranslationService.swift */; };
 		D574BC3E2730772A006B3FD5 /* ConversionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D574BC3D2730772A006B3FD5 /* ConversionService.swift */; };
 		D579CFD827D39809003FADFA /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579CFD727D39809003FADFA /* ConversionViewController.swift */; };
+		D59B1C3E281AB6A2001627EB /* meteoError1.json in Resources */ = {isa = PBXBuildFile; fileRef = D59B1C3D281AB6A2001627EB /* meteoError1.json */; };
+		D59B1C40281AC548001627EB /* meteoError2.json in Resources */ = {isa = PBXBuildFile; fileRef = D59B1C3F281AC548001627EB /* meteoError2.json */; };
 		D5B3C6BA27F7935100EF21BE /* Meteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B3C6B927F7935100EF21BE /* Meteo.swift */; };
 		D5C82C7226656E5300C11771 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C82C7126656E5300C11771 /* TranslationViewController.swift */; };
 		D5E38E8427FA31E60003B519 /* TranslationServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E38E8327FA31E60003B519 /* TranslationServiceTestCase.swift */; };
@@ -71,6 +73,8 @@
 		D574BC3B273076FA006B3FD5 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		D574BC3D2730772A006B3FD5 /* ConversionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionService.swift; sourceTree = "<group>"; };
 		D579CFD727D39809003FADFA /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../../../../ConversionViewController.swift; sourceTree = "<group>"; };
+		D59B1C3D281AB6A2001627EB /* meteoError1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = meteoError1.json; sourceTree = "<group>"; };
+		D59B1C3F281AC548001627EB /* meteoError2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = meteoError2.json; sourceTree = "<group>"; };
 		D5B3C6B927F7935100EF21BE /* Meteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteo.swift; sourceTree = "<group>"; };
 		D5C82C7126656E5300C11771 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		D5E38E7827F9ECEB0003B519 /* MonBalluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonBalluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,8 @@
 		D56AE7F027FB92C2001542E0 /* JSONTests */ = {
 			isa = PBXGroup;
 			children = (
+				D59B1C3D281AB6A2001627EB /* meteoError1.json */,
+				D59B1C3F281AC548001627EB /* meteoError2.json */,
 				D55BD1D1281163EA00488BBC /* TranslationRu.json */,
 				D55BD1D32811641200488BBC /* TranslationEs.json */,
 				D55BD1CF2811614800488BBC /* TranslationIt.json */,
@@ -295,8 +301,10 @@
 				D56AE7F227FB934A001542E0 /* Meteo.json in Resources */,
 				D56AE7F427FB9371001542E0 /* Conversion.json in Resources */,
 				D55BD1CE2811425400488BBC /* TranslationDe.json in Resources */,
+				D59B1C40281AC548001627EB /* meteoError2.json in Resources */,
 				D55BD1D02811614800488BBC /* TranslationIt.json in Resources */,
 				D56AE7F627FB9393001542E0 /* Translation.json in Resources */,
+				D59B1C3E281AB6A2001627EB /* meteoError1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,17 @@ class FakeResponseData  {
         let url = bundle.url(forResource: "Meteo", withExtension: "json")!
         return try! Data(contentsOf: url)
     }
+    
+    static var weatherCorrectData2: Data? {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "MeteoError1", withExtension: "json")!
+        return try! Data(contentsOf: url)
+    }
+    static var weatherCorrectData3: Data? {
+        let bundle = Bundle(for: FakeResponseData.self)
+        let url = bundle.url(forResource: "MeteoError2", withExtension: "json")!
+        return try! Data(contentsOf: url)
+    }
 
     static var translationCorrectData: Data? {
         let bundle = Bundle(for: FakeResponseData.self)
@@ -47,7 +58,13 @@ class FakeResponseData  {
         return try! Data(contentsOf: url)
     }
    
-   
+    static var meteoFunny: Data? {
+            let bundle = Bundle(for: FakeResponseData.self)
+            let url = bundle.url(forResource: "meteoError2", withExtension:
+             "json")!
+            return try! Data(contentsOf: url)
+    }
+
 
     static let conversionIncorrectData = "erreur".data(using: .utf8)!
     static let weatherIncorrectData = "erreur".data(using: .utf8)!
@@ -61,6 +78,14 @@ class FakeResponseData  {
     static let responseKO = HTTPURLResponse(
         url: URL(string: "https://openclassrooms.com")!,
         statusCode: 500, httpVersion: nil, headerFields: [:])!
+    
+    static let responseKO404 = HTTPURLResponse(
+            url: URL(string: "https://openclassrooms.com")!,
+            statusCode: 404, httpVersion: nil, headerFields: [:])!
+    
+    static let MeteoFunny = HTTPURLResponse(
+            url: URL(string: "https://openclassrooms.com")!,
+            statusCode: 406, httpVersion: nil, headerFields: [:])!
 
     // MARK: - Error
     class ConversionError: Error {}

@@ -21,9 +21,11 @@ class MeteoService {
     }
 
     // MARK: - Sending alert notification
-    private func sendAlertNotification(message : String) {
+    private  func sendAlertNotification(message : String) {
         let alertName = Notification.Name("alertDisplay")
         NotificationCenter.default.post(name: alertName, object: nil, userInfo: ["message": message])
+         let myMessage = message
+         print(myMessage)
     } // end of sendAlertNotification
 
     // MARK: - recovery and processing of weather
@@ -33,20 +35,21 @@ class MeteoService {
         task?.cancel()
         task = meteoSession.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
-                guard let data = data, error == nil else {
-                    callback(false, nil)
-                    self.sendAlertNotification(message: "No response from server")
-                    return
-                }
-                print("data OK")
-                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    callback(false, nil)
-                    print("No response from meteoSession")
-                    self.sendAlertNotification(message: "Please choose a town !")
-                    return
-                }
-                print("response's status OK")
-                guard let responseJSON = try? JSONDecoder().decode(MyData.self, from: data) else {
+//                guard let data = data, error == nil else {
+//                    callback(false, nil)
+//                    self.sendAlertNotification(message: "No response from server")
+//                    print("No response from server")
+//                    return
+//                }
+//                print("data OK")
+//                guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+//                    callback(false, nil)
+//                    print("No response from meteoSession")
+//                    self.sendAlertNotification(message: "Please choose a town !")
+//                    return
+//                }
+//                print("response's status OK")
+                guard let responseJSON = try? JSONDecoder().decode(MyData.self, from: data!) else {
                     callback(false, nil)
                     print("Failed to decode meteoJSON")
                     self.sendAlertNotification(message: "failed to process server's response ")
